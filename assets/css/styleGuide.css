@@ -1,0 +1,105 @@
+:root {
+  /* Colors */
+  /* Brand Color */
+
+  --primary1000: #0b4962;
+  --primary900: #0c688c;
+  --primary800: #1382ad;
+  --primary700: #139bd0;
+  --primary600: #16b2ef;
+  --primary500: #4dc8f9;
+  --primary400: #75d8ff;
+  --primary300: #9fe4ff;
+  --primary200: #c6efff;
+  --primary100: #e7f8ff;
+
+  /* Neutral Color */
+
+  --dark0: #0e151f;
+  --dark100: #152031;
+  --dark200: #1f2b3d;
+  --dark300: #2f3a4b;
+  --dark400: #465061;
+  --dark500: #657080;
+  --dark600: #8d99a7;
+  --dark700: #afb9c5;
+  --dark800: #cad2db;
+  --light900: #e3e8ef;
+  --light1000: #f4f7f8;
+  --light1100: #ffffff;
+
+  /* Auxiliary Color */
+
+  --red1000: #4e0000;
+  --red900: #750000;
+  --red800: #9e0b0b;
+  --red700: #ca1515;
+  --red600: #ff2e2e;
+  --red500: #fe5f5f;
+  --red400: #ff9797;
+  --red300: #ffb8b8;
+  --red200: #ffd7d7;
+  --red100: #fff3f3;
+
+  --orange1000: #774700;
+  --orange900: #9c5e00;
+  --orange800: #ba7002;
+  --orange700: #d88100;
+  --orange600: #ff9900;
+  --orange500: #ffaf36;
+  --orange400: #ffc46b;
+  --orange300: #ffd493;
+  --orange200: #ffe2b7;
+  --orange100: #fff3e0;
+
+  --yellow1000: #7d6a00;
+  --yellow900: #a28803;
+  --yellow800: #b99c03;
+  --yellow700: #debb00;
+  --yellow600: #ffd600;
+  --yellow500: #ffe24d;
+  --yellow400: #ffe871;
+  --yellow300: #ffed8c;
+  --yellow200: #fff3b5;
+  --yellow100: #fff9de;
+
+  --green1000: #1b5b10;
+  --green900: #297a1b;
+  --green800: #399929;
+  --green700: #42a431;
+  --green600: #53b942;
+  --green500: #69d357;
+  --green400: #8be37c;
+  --green300: #a4f497;
+  --green200: #bfffb4;
+  --green100: #e5ffe1;
+
+  --pink1000: #79005b;
+  --pink900: #a61381;
+  --pink800: #c22199;
+  --pink700: #df32b3;
+  --pink600: #ff3fce;
+  --pink500: #ff68d9;
+  --pink400: #ff8ae1;
+  --pink300: #ffa0e7;
+  --pink200: #ffbcee;
+  --pink100: #ffe6f9;
+
+  /* Typography */
+  /* Fonts size */
+  --fontSizeTitleH1: 64px;
+  --fontSizeTitleH2: 56px;
+  --fontSizeTitleH3: 48px;
+  --fontSizeTitleH4: 40px;
+  --fontSizeTitleH5: 36px;
+  --fontSizeTitleH6: 32px;
+  --fontSizeTitleH7: 24px;
+
+  --fontSizeTextP1: 24px;
+  --fontSizeTextP2: 20px;
+  --fontSizeTextP3: 18px;
+  --fontSizeTextP4: 16px;
+  --fontSizeTextP5: 14px;
+  --fontSizeTextP6: 12px;
+  --fontSizeTextP7: 11px;
+}

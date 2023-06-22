@@ -1,0 +1,36 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--light1100);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #a3a6ae;
+}
+
+input {
+  border: 0;
+}
