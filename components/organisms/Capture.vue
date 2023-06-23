@@ -68,6 +68,7 @@
 
         <div class="wrapper-form">
           <AtomSelect
+            label="Plano de interesse"
             :options="['Iniciante', 'Profissional', 'Avançado', 'Premium']"
           />
           <AtomInput label="Nome" type="text" />
@@ -75,7 +76,11 @@
             <AtomInput label="Email" type="email" />
             <AtomInput label="Telefone" type="tel" />
           </div>
-          <AtomInput label="Onde os conheceu" type="text" />
+          <AtomSelect
+            label="Onde os conheceu"
+            :options="['Iniciante', 'Profissional', 'Avançado', 'Premium']"
+          />
+
           <div class="wrapper-check">
             <input id="vehicle1" type="checkbox" name="vehicle1" value="Bike" />
             <AtomParagraph

@@ -18,10 +18,14 @@ export default {
       type: Array,
       required: true,
     },
+    label: {
+      type: String,
+      default: "",
+    },
   },
   data() {
     return {
-      value: "Plano de interesse",
+      value: this.label,
     };
   },
   mounted() {

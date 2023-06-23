@@ -36,6 +36,7 @@
         />
       </div>
     </div>
+    <div class="gradient"></div>
   </section>
 </template>
 
@@ -50,6 +51,12 @@ export default {
   width: 100%;
   background-color: var(--dark0);
   padding: 0 112px;
+  background-image: url("/images/bg-header.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position: 0 100%;
+  background-size: 74%;
+  position: relative;
 }
 
 .wrapper-header {
@@ -61,10 +68,22 @@ export default {
   gap: 110px;
 }
 
+.gradient {
+  z-index: 1;
+  background: linear-gradient(#0e151f00, #0e151f);
+  min-height: 417px;
+  min-width: 100%;
+  position: absolute;
+  z-index: 1;
+  margin-top: -417px;
+  margin-left: -112px;
+}
+
 .wrapper-text {
   display: flex;
   flex-direction: column;
   gap: 56px;
+  z-index: 2;
 }
 
 .wrapper-title {
