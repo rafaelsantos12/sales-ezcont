@@ -82,4 +82,10 @@ export default {
 .wrapper-image {
   margin-bottom: -10px;
 }
+
+@media (max-width: 1199.98px) {
+  .wrapper-header {
+    grid-template-columns: auto;
+  }
+}
 </style>

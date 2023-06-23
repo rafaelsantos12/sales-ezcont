@@ -67,7 +67,9 @@
         </AtomTitle>
 
         <div class="wrapper-form">
-          <AtomInput label="Plano de interesse" type="text" />
+          <AtomSelect
+            :options="['Iniciante', 'Profissional', 'Avançado', 'Premium']"
+          />
           <AtomInput label="Nome" type="text" />
           <div class="wrapper-email-tel">
             <AtomInput label="Email" type="email" />
@@ -224,6 +226,6 @@ export default {
 
 .button-close {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 </style>

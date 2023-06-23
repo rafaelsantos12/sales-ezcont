@@ -93,7 +93,6 @@
             <div class="plan-top">
               <div class="wrapper-text">
                 <AtomTitle
-                  class="title-plan"
                   font-family="Inter, sans-serif"
                   font-size="var(--fontSizeTextP4)"
                   color="var(--dark700)"
