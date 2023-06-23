@@ -1,5 +1,5 @@
 <template>
-  <section class="section-works">
+  <section id="como-funciona" class="section-works">
     <div class="wrapper-container">
       <div class="wrapper-comment">
         <AtomTitle

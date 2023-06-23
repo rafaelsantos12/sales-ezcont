@@ -1,5 +1,10 @@
 <template>
-  <section class="section-capture">
+  <section
+    class="section-capture"
+    :class="{
+      'show-effect': isShowEffect,
+    }"
+  >
     <div class="wrapper-container">
       <div class="wrapper-left">
         <div class="wrapper-text-button">
@@ -36,48 +41,189 @@
           profile="CEO da WebOnline"
         />
       </div>
-      <div class="wrapper-right"></div>
+      <div class="wrapper-right">
+        <div class="button-close">
+          <AtomButton
+            width="48px"
+            height="48px"
+            bg-color="var(--light900)"
+            hover-bg-color="var(--light900)"
+            color="var(--dark400)"
+            border-radius="100px"
+            font-size="var(--fontSizeTitleH6)"
+            @click="setShowForm(false)"
+          >
+            <AtomIcon name="close" cursor="pointer" />
+          </AtomButton>
+        </div>
+        <AtomTitle
+          font-family="Poppins"
+          font-size="var(--fontSizeTitleH7)"
+          color="var(--dark100)"
+          line-height="140%"
+          font-weight="500"
+        >
+          Preencha seus dados abaixo
+        </AtomTitle>
+
+        <div class="wrapper-form">
+          <AtomInput label="Plano de interesse" type="text" />
+          <AtomInput label="Nome" type="text" />
+          <div class="wrapper-email-tel">
+            <AtomInput label="Email" type="email" />
+            <AtomInput label="Telefone" type="tel" />
+          </div>
+          <AtomInput label="Onde os conheceu" type="text" />
+          <div class="wrapper-check">
+            <input id="vehicle1" type="checkbox" name="vehicle1" value="Bike" />
+            <AtomParagraph
+              font-family="Inter, sans-serif"
+              type="text-p5"
+              color="var(--dark500)"
+              line-height="140%"
+              font-weight="400"
+            >
+              Eu declaro que li e concordo com os <a>termos de uso</a>.
+            </AtomParagraph>
+          </div>
+        </div>
+
+        <AtomButton
+          border-radius="100px"
+          bg-color="var(--primary600)"
+          color="var(--light1100)"
+          color-hover="var(--light1100)"
+          font-size="var(--fontSizeTextP5)"
+          font-weight="500"
+          height="48px"
+          border-color="var(--primary600)"
+          hover-border-color="var(--primary900)"
+          hover-bg-color="var(--primary900)"
+        >
+          Quero começar agora
+        </AtomButton>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
+import { mapGetters, mapMutations } from "vuex";
 export default {
   name: "OrganismCapture",
+  data() {
+    return {
+      isShowEffect: this.showForm,
+      show: this.showForm,
+    };
+  },
+  computed: {
+    ...mapGetters("form", ["showForm"]),
+  },
+  watch: {
+    showForm(value) {
+      this.isShowEffect = value;
+      this.show = value;
+    },
+  },
+  methods: {
+    ...mapMutations("form", ["setShowForm"]),
+  },
 };
 </script>
 
 <style scoped>
 .section-capture {
   position: relative;
-  background-color: var(--dark0);
-  padding: 80px 112px 80px;
+  position: absolute;
+  margin: 0 auto;
+  height: 705px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  z-index: 99;
+  position: fixed;
+  bottom: 0;
+  transform: translateY(100%);
+  width: 100%;
+  transition: box-shadow 1s, transform 1s;
+}
+
+.section-capture.show-effect {
+  transform: translateY(0);
+  transition: box-shadow 1s, transform 1s;
+}
+
+.section-capture::before {
+  background: #000000;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.75;
+  position: absolute;
+  top: 0;
+  transition: opacity 1s;
+  width: 100%;
 }
 
 .wrapper-container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  max-width: 1200px;
   margin: 0 auto;
+  bottom: 0;
+  position: absolute;
 }
 
 .wrapper-left {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  padding: 80px 108px 65px 112px;
   background: var(--light1000);
+  border-top-left-radius: 40px;
+}
+
+.wrapper-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 80px 108px 65px 112px;
+  background: var(--light1100);
+  border-top-right-radius: 40px;
 }
 
 .wrapper-text-button {
   display: flex;
   flex-direction: column;
-  gap: 87px;
+  gap: 24px;
 }
 
 .wrapper-text {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.wrapper-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.wrapper-email-tel {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.wrapper-check {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.button-close {
+  display: flex;
+  justify-content: end;
 }
 </style>

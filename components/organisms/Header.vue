@@ -1,7 +1,9 @@
 <template>
   <section class="section-header">
     <div class="wrapper-header">
-      <div class="wrapper-image"></div>
+      <div class="wrapper-image">
+        <AtomImageCustom src="/images/model.png" width="100%" height="100%" />
+      </div>
       <div class="wrapper-text">
         <div class="text-header">
           <div class="wrapper-title">
@@ -53,10 +55,10 @@ export default {
 .wrapper-header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  padding: 206px 0 111px;
+  padding: 206px 0 0;
   max-width: 1200px;
   margin: 0 auto;
+  gap: 110px;
 }
 
 .wrapper-text {
@@ -75,5 +77,9 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+.wrapper-image {
+  margin-bottom: -10px;
 }
 </style>

@@ -19,6 +19,7 @@
     </div>
     <OrganismDoubt />
     <OrganismFooter />
+
     <OrganismCapture />
   </div>
 </template>

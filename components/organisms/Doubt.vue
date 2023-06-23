@@ -1,5 +1,5 @@
 <template>
-  <section class="wrapper-case">
+  <section id="duvidas" class="wrapper-case">
     <div class="wrapper-main">
       <div class="wrapper-left">
         <div class="wrapper-text-button">

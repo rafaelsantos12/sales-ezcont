@@ -1,5 +1,5 @@
 <template>
-  <section class="section-number-solution">
+  <section id="solucoes" class="section-number-solution">
     <div class="wrapper-container">
       <div class="wrapper-number">
         <div class="wrapper-number-text">
@@ -91,6 +91,8 @@ export default {
   width: 100%;
   background-color: var(--light1100);
   padding: 0 112px;
+  z-index: 1;
+  position: relative;
 }
 
 .wrapper-container {

@@ -37,6 +37,7 @@
           hover-border-color="var(--dark300)"
           color-hover="var(--light1100)"
           hover-bg-color="var(--dark300)"
+          @click="app"
         >
           Acessar
         </AtomButton>
@@ -52,24 +53,21 @@
           border-color="var(--dark200)"
           hover-border-color="var(--primary900)"
           hover-bg-color="var(--primary900)"
+          @click="setShowForm(true)"
         >
           Fale com a gente
         </AtomButton>
       </div>
 
       <div class="button-mobile">
-        <AtomIcon
-          name="menu"
-          color="var(--light1100)"
-          cursor="pointer"
-          @click="$emit('clickMenuMobile')"
-        />
+        <AtomIcon name="menu" color="var(--light1100)" cursor="pointer" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 import { scrollToElement } from "@/static/utils";
 export default {
   name: "HeaderNav",
@@ -100,18 +98,23 @@ export default {
         },
         {
           title: "Dúvidas",
-          to: "#dúvidas",
+          to: "#duvidas",
         },
       ],
     };
   },
 
   methods: {
+    ...mapMutations("form", ["setShowForm"]),
     click(item) {
       this.$nextTick(() => {
-        // const firstErroMessageEl = this.$el.querySelector("ul.list-error>li");
-        scrollToElement(item.to);
+        const firstErroMessageEl = this.$el.querySelector("item.to");
+        scrollToElement(firstErroMessageEl);
       });
+    },
+
+    app() {
+      window.open("https://app.ezcont.com.br/login", "_blank");
     },
   },
 };

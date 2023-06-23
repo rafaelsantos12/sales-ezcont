@@ -1,5 +1,5 @@
 <template>
-  <section class="section-plans">
+  <section id="planos" class="section-plans">
     <div class="wrapper-container">
       <div class="wrapper-left">
         <div class="wrapper-title">

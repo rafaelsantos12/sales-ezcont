@@ -1,5 +1,5 @@
 <template>
-  <section class="section-advantage">
+  <section id="vantagens" class="section-advantage">
     <div class="wrapper-container">
       <div class="wrapper-text">
         <div class="top-advantage">
