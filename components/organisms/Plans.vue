@@ -28,7 +28,7 @@
             </div>
           </div>
           <div class="wrapper-checkbox">
-            <AtomSwitchCheckbox />
+            <AtomSwitchCheckbox @input="planYearly = !planYearly" />
             <AtomParagraph
               font-family="Inter, sans-serif"
               type="text-p3"
@@ -61,29 +61,41 @@
         <div class="wrapper-tabs">
           <AtomButton
             border-radius="100px"
-            bg-color="var(--primary600)"
-            color="var(--light1100)"
-            color-hover="var(--light1100)"
-            font-size="var(--fontSizeTextP5)"
-            font-weight="500"
+            :bg-color="isAffiliate ? 'var(--dark800)' : 'var(--dark100)'"
+            :color="isAffiliate ? 'var(--dark100)' : 'var(--dark600)'"
+            :color-hover="isAffiliate ? 'var(--dark100)' : 'var(--dark600)'"
+            font-size="var(--fontSizeTextP4)"
+            font-weight="600"
             height="40px"
-            border-color="var(--dark200)"
-            hover-border-color="var(--primary900)"
-            hover-bg-color="var(--primary900)"
+            :border-color="isAffiliate ? 'var(--dark800)' : 'var(--dark100)'"
+            :hover-border-color="
+              isAffiliate ? 'var(--dark800)' : 'var(--dark200)'
+            "
+            :hover-bg-color="isAffiliate ? 'var(--dark800)' : 'var(--dark200)'"
+            @click="
+              isAffiliate = true;
+              isProducer = false;
+            "
           >
             Sou afiliado
           </AtomButton>
           <AtomButton
             border-radius="100px"
-            bg-color="var(--primary600)"
-            color="var(--light1100)"
-            color-hover="var(--light1100)"
-            font-size="var(--fontSizeTextP5)"
-            font-weight="500"
+            :bg-color="isProducer ? 'var(--dark800)' : 'var(--dark100)'"
+            :color="isProducer ? 'var(--dark100)' : 'var(--dark600)'"
+            :color-hover="isProducer ? 'var(--dark100)' : 'var(--dark600)'"
+            font-size="var(--fontSizeTextP4)"
+            font-weight="600"
             height="40px"
-            border-color="var(--dark200)"
-            hover-border-color="var(--primary900)"
-            hover-bg-color="var(--primary900)"
+            :border-color="isProducer ? 'var(--dark800)' : 'var(--dark200)'"
+            :hover-border-color="
+              isProducer ? 'var(--dark800)' : 'var(--dark200)'
+            "
+            :hover-bg-color="isProducer ? 'var(--dark800)' : 'var(--dark200)'"
+            @click="
+              isAffiliate = false;
+              isProducer = true;
+            "
           >
             Sou produtor
           </AtomButton>
@@ -194,6 +206,9 @@ export default {
   name: "OrganismPlans",
   data() {
     return {
+      planYearly: false,
+      isAffiliate: false,
+      isProducer: true,
       itens: [
         {
           title: "Imposto de renda PJ e PF",
