@@ -87,7 +87,7 @@
             font-size="var(--fontSizeTextP4)"
             font-weight="600"
             height="40px"
-            :border-color="isProducer ? 'var(--dark800)' : 'var(--dark200)'"
+            :border-color="isProducer ? 'var(--dark800)' : 'var(--dark100)'"
             :hover-border-color="
               isProducer ? 'var(--dark800)' : 'var(--dark200)'
             "
@@ -101,9 +101,29 @@
           </AtomButton>
         </div>
         <div class="wrapper-plan">
-          <div v-for="(plan, index) in plans" :key="index" class="plan">
-            <div class="plan-top">
+          <div
+            v-for="(plan, index) in plans"
+            :key="index"
+            class="plan"
+            :class="{
+              'disabled-afiliate': isProducer && plan.for === 'afiliado',
+              'disabled-producer': isAffiliate && plan.for === 'produtor',
+            }"
+          >
+            <div class="plan-top" :class="{ tag: plan.tag }">
               <div class="wrapper-text">
+                <div v-if="plan.tag" class="tag">
+                  <AtomParagraph
+                    font-family="Inter, sans-serif"
+                    type="text-p5"
+                    color="var(--light1100)"
+                    line-height="160%"
+                    font-weight="400"
+                    text-align="center"
+                  >
+                    Mais popular
+                  </AtomParagraph>
+                </div>
                 <AtomTitle
                   font-family="Inter, sans-serif"
                   font-size="var(--fontSizeTextP4)"
@@ -264,21 +284,29 @@ export default {
           type: "INICIANTE",
           price: "309",
           payment: "mensal",
+          tag: false,
+          for: "afiliado",
         },
         {
           type: "PROFISSIONAL",
           price: "419",
           payment: "mensal",
+          tag: true,
+          for: "afiliado",
         },
         {
           type: "AVANÇADO",
           price: "549",
           payment: "mensal",
+          tag: false,
+          for: "afiliado",
         },
         {
           type: "PREMIUM",
           price: "597",
           payment: "mensal",
+          tag: false,
+          for: "produtor",
         },
       ],
       tabActive: false,
@@ -381,6 +409,17 @@ export default {
   gap: 16px;
 }
 
+.wrapper-text .tag {
+  height: 27px;
+  padding: 4px 12px;
+  background: #d88100;
+  border-radius: 100px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: -45px;
+}
+
 .wrapper-checkbox {
   display: flex;
   gap: 24px;
@@ -418,6 +457,17 @@ export default {
   background-color: var(--dark100);
 }
 
+.plan {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.plan.disabled-producer,
+.plan.disabled-afiliate {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
 .table.plan {
   border-radius: 0px;
   border: solid var(--dark0) 0px;
@@ -435,6 +485,7 @@ export default {
   grid-template-columns: auto auto auto auto;
   grid-gap: 1px;
   grid-template-rows: auto;
+  margin-top: 14px;
 }
 
 .wrapper-tabs {
@@ -457,6 +508,10 @@ export default {
   max-width: 174px;
   height: 279px;
   justify-content: center;
+}
+
+.plan-top.tag {
+  background: var(--dark300);
 }
 
 .wrapper-action {
