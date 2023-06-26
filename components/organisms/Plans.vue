@@ -40,7 +40,7 @@
             </AtomParagraph>
           </div>
         </div>
-        <table class="table">
+        <table class="table left">
           <tr v-for="(item, index) in itens" :key="index">
             <td class="table-td">
               <AtomTitle
@@ -144,7 +144,8 @@
                     font-weight="500"
                     text-align="center"
                   >
-                    <span style="font-size: 14px">R$</span>{{ plan.price }}
+                    <span style="font-size: 14px">R$</span
+                    >{{ planYearly ? plan.priceYearly : plan.priceMonthly }}
                     <span style="font-size: 14px">,00</span>
                   </AtomTitle>
                   <AtomParagraph
@@ -182,9 +183,22 @@
                   font-weight="400"
                   text-decoration="underline"
                   text-align="center"
+                  cursor="pointer"
+                  class="info"
                 >
                   Saiba mais
                 </AtomParagraph>
+                <div
+                  class="ballon-info"
+                  :class="{
+                    'disabled-info-afiliado':
+                      isProducer && plan.for === 'afiliado',
+                    'disabled-info-producer':
+                      isAffiliate && plan.for === 'produtor',
+                  }"
+                >
+                  {{ plan.info }}
+                </div>
               </div>
             </div>
             <table class="table plan">
@@ -282,31 +296,39 @@ export default {
       plans: [
         {
           type: "INICIANTE",
-          price: "309",
+          priceMonthly: "309",
+          priceYearly: "263",
           payment: "mensal",
           tag: false,
           for: "afiliado",
+          info: "Faturamento: R$0,00 - R$25.000,00",
         },
         {
           type: "PROFISSIONAL",
-          price: "419",
+          priceMonthly: "419",
+          priceYearly: "356",
           payment: "mensal",
           tag: true,
           for: "afiliado",
+          info: "Faturamento: R$25.000,00 - R$75.000,00",
         },
         {
           type: "AVANÇADO",
-          price: "549",
+          priceMonthly: "549",
+          priceYearly: "467",
           payment: "mensal",
           tag: false,
           for: "afiliado",
+          info: "Faturamento: R$75.000,00 - R$300.000,00",
         },
         {
           type: "PREMIUM",
-          price: "597",
+          priceMonthly: "597",
+          priceYearly: "537",
           payment: "mensal",
           tag: false,
           for: "produtor",
+          info: "Recomendado para produtores",
         },
       ],
       tabActive: false,
@@ -464,7 +486,7 @@ export default {
 
 .plan.disabled-producer,
 .plan.disabled-afiliate {
-  opacity: 0.5;
+  opacity: 0.2;
   transition: 0.3s;
 }
 
@@ -530,5 +552,65 @@ export default {
   padding: 10px 24px;
   height: 58px;
   align-items: center;
+}
+
+.info:hover ~ .ballon-info {
+  display: block;
+}
+
+.ballon-info {
+  display: none;
+  margin: 0 auto;
+  text-align: center;
+  background: #cad2db;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 22.4px;
+  border-radius: 10px;
+  width: 145px;
+  height: auto;
+  color: #152031;
+  padding: 16px;
+  margin-top: 100px;
+  position: absolute;
+}
+
+.ballon-info:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #cad2db;
+  top: -10px;
+  left: 60px;
+}
+
+.info:hover ~ .ballon-info.disabled-info-afiliado {
+  display: none;
+}
+
+.info:hover ~ .ballon-info.disabled-info-producer {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .section-plans {
+    padding: 80px 32px 80px;
+  }
+
+  .wrapper-container {
+    grid-template-columns: auto;
+  }
+
+  .table.left {
+    display: none;
+  }
+
+  .wrapper-right {
+    overflow: hidden;
+    overflow-x: scroll;
+  }
 }
 </style>

@@ -9,6 +9,7 @@
           line-height="140%"
           font-weight="500"
           text-align="center"
+          class="title"
         >
           Passe para o próximo nível<br />
           sendo um cliente EzCont!
@@ -19,6 +20,7 @@
           color="var(--light1100)"
           line-height="140%"
           font-weight="400"
+          class="paragraph"
         >
           Deixe o modelo contábil ultrapassado de lado e automatize sua rotina
           financeira!
@@ -110,5 +112,24 @@ export default {
 
 .line-division {
   margin-top: -150px;
+}
+
+@media (max-width: 768px) {
+  .section-footer {
+    padding: 0px 32px;
+  }
+
+  .wrapper-info {
+    padding: 32px;
+    height: auto;
+  }
+
+  .title {
+    font-size: 24px !important;
+  }
+
+  .paragraph {
+    font-size: 16px !important;
+  }
 }
 </style>

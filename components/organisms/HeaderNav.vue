@@ -60,7 +60,12 @@
       </div>
 
       <div class="button-mobile">
-        <AtomIcon name="menu" color="var(--light1100)" cursor="pointer" />
+        <AtomIcon
+          name="menu"
+          color="var(--light1100)"
+          cursor="pointer"
+          @click.native="$emit('clickMenuMobile')"
+        />
       </div>
     </div>
   </div>

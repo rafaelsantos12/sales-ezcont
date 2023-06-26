@@ -119,4 +119,18 @@ export default {
   flex-direction: column;
   gap: 24px;
 }
+
+@media (max-width: 767.98px) {
+  .section-works {
+    padding: 0 32px 120px;
+  }
+
+  .embed-container {
+    width: 100%;
+  }
+
+  .wrapper-container {
+    grid-template-columns: auto;
+  }
+}
 </style>

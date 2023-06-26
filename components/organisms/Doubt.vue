@@ -174,4 +174,14 @@ export default {
     margin-bottom: 250px;
   }
 }
+
+@media (max-width: 768px) {
+  .wrapper-case {
+    padding: 120px 32px;
+  }
+
+  .wrapper-main {
+    grid-template-columns: auto;
+  }
+}
 </style>

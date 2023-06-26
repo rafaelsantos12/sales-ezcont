@@ -117,4 +117,18 @@ export default {
   display: flex;
   gap: 32px;
 }
+
+@media (max-width: 767.98px) {
+  .section-advantage {
+    padding: 120px 32px 80px;
+  }
+
+  .wrapper-container {
+    grid-template-columns: auto;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+}
 </style>

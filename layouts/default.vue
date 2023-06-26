@@ -1,7 +1,11 @@
 <template>
   <div class="content">
     <main>
-      <OrganismHeaderNav />
+      <OrganismHeaderNav @clickMenuMobile="isActiveMobile = !isActiveMobile" />
+      <OrganismHeaderNavMobile
+        :active-mobile="isActiveMobile"
+        @clickCloseModal="isActiveMobile = false"
+      />
       <Nuxt />
     </main>
   </div>
@@ -9,6 +13,11 @@
 <script>
 export default {
   name: "DefaultLayout",
+  data() {
+    return {
+      isActiveMobile: false,
+    };
+  },
 };
 </script>
 

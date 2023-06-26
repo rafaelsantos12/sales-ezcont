@@ -148,4 +148,14 @@ iframe {
   border: none;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .embed-container {
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 100%;
+  }
+}
 </style>

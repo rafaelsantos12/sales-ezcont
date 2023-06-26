@@ -8,7 +8,24 @@
     <div class="wrapper-container">
       <div class="wrapper-left">
         <div class="wrapper-text-button">
-          <MoleculeLineText text="CONTATO" />
+          <div class="wrapper-contact">
+            <MoleculeLineText text="CONTATO" />
+            <div class="button-close mobile">
+              <AtomButton
+                width="48px"
+                height="48px"
+                bg-color="var(--light900)"
+                hover-bg-color="var(--light900)"
+                color="var(--dark400)"
+                border-radius="100px"
+                font-size="var(--fontSizeTitleH6)"
+                @click="setShowForm(false)"
+              >
+                <AtomIcon name="close" cursor="pointer" />
+              </AtomButton>
+            </div>
+          </div>
+
           <div class="wrapper-text">
             <AtomTitle
               font-family="Poppins"
@@ -16,6 +33,7 @@
               color="var(--dark100)"
               line-height="140%"
               font-weight="500"
+              class="title"
             >
               Contrate agora e transforme a sua rotina financeira.
             </AtomTitle>
@@ -25,6 +43,7 @@
               color="var(--dark500)"
               line-height="140%"
               font-weight="400"
+              class="description"
             >
               Preencha o formulário e escolha a solução ideal para o seu
               negócio. Um de nossos especialistas entrará em contato!
@@ -39,10 +58,11 @@
           et dolore magna  "
           name="Marcos André Vória"
           profile="CEO da WebOnline"
+          class="comment-capture"
         />
       </div>
       <div class="wrapper-right">
-        <div class="button-close">
+        <div class="button-close close-desktop">
           <AtomButton
             width="48px"
             height="48px"
@@ -232,5 +252,51 @@ export default {
 .button-close {
   display: flex;
   justify-content: flex-end;
+}
+
+.wrapper-contact {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-close.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .comment-capture {
+    display: none !important;
+  }
+
+  .wrapper-left {
+    padding: 48px 32px;
+    border-top-right-radius: 20px;
+  }
+
+  .title {
+    font-size: 24px !important;
+  }
+
+  .description {
+    font-size: 18px !important;
+  }
+
+  .wrapper-right {
+    padding: 48px 32px;
+    border-top-right-radius: 0px;
+  }
+
+  .button-close.mobile {
+    display: block;
+  }
+
+  .wrapper-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .close-desktop {
+    display: none !important;
+  }
 }
 </style>

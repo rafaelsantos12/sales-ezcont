@@ -172,4 +172,18 @@ export default {
 .card-comment-testimony {
   margin-bottom: 180px;
 }
+
+@media (max-width: 767.98px) {
+  .section-testimony {
+    padding: 0 32px;
+  }
+
+  .wrapper-container {
+    padding: 0 32px;
+  }
+
+  .wrapper-container {
+    grid-template-columns: auto;
+  }
+}
 </style>

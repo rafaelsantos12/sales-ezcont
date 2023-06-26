@@ -10,6 +10,7 @@
         color="var(--dark100)"
         line-height="140%"
         font-weight="500"
+        class="title"
       >
         {{ title }}
       </AtomTitle>
@@ -74,5 +75,21 @@ export default {
   justify-content: center;
   left: -24px;
   background: var(--light1100);
+}
+
+@media (max-width: 768px) {
+  .icon {
+    top: -30px;
+    left: 24px;
+  }
+
+  .wrapper-card-solution {
+    padding: 24px;
+    min-width: 262px;
+  }
+
+  .title {
+    font-size: var(--fontSizeTextP2) !important;
+  }
 }
 </style>

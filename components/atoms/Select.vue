@@ -116,9 +116,19 @@ export default {
 .dropdown-list a {
   display: block;
   text-decoration: none;
-  color: #333;
+  color: #657080;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
   padding: 10px 0;
   transition: all 0.3s ease-out;
   border-bottom: 1px solid #e6e8ea;
+}
+
+span {
+  color: #657080;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
 }
 </style>

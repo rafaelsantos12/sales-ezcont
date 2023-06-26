@@ -13,6 +13,7 @@
               font-size="var(--fontSizeTitleH3)"
               color="var(--light1100)"
               line-height="140%"
+              class="title-header"
             >
               Contabilidade digital para produtores, afiliados e negócios
               digitais!
@@ -105,6 +106,33 @@ export default {
 @media (max-width: 1199.98px) {
   .wrapper-header {
     grid-template-columns: auto;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .section-header {
+    padding: 0 56px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section-header {
+    padding: 0 32px;
+  }
+
+  .wrapper-header {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .title-header {
+    font-size: var(--fontSizeTitleH6) !important;
+  }
+
+  .gradient {
+    margin-left: 0;
+    min-width: 90%;
+    margin-top: -300px;
   }
 }
 </style>
