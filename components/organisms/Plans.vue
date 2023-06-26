@@ -172,6 +172,13 @@
                   border-color="var(--dark200)"
                   hover-border-color="var(--primary900)"
                   hover-bg-color="var(--primary900)"
+                  @click="
+                    isProducer && plan.for === 'produtor'
+                      ? setShowForm(true)
+                      : isAffiliate && plan.for === 'afiliado'
+                      ? setShowForm(true)
+                      : null
+                  "
                 >
                   Contratar
                 </AtomButton>
@@ -236,6 +243,7 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   name: "OrganismPlans",
   data() {
@@ -386,6 +394,9 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    ...mapMutations("form", ["setShowForm"]),
   },
 };
 </script>
