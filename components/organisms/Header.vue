@@ -125,6 +125,7 @@ export default {
 
   .image-header {
     margin-left: 0px;
+    margin-top: 56px;
   }
 }
 
