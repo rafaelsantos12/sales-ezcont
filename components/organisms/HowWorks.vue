@@ -80,7 +80,7 @@ import { mapMutations } from "vuex";
 export default {
   name: "HowWorks",
   methods: {
-    ...mapMutations(["setShowForm"]),
+    ...mapMutations("form", ["setShowForm"]),
   },
 };
 </script>

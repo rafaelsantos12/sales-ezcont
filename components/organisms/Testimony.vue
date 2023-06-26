@@ -112,7 +112,7 @@ import { mapMutations } from "vuex";
 export default {
   name: "OrganismTestimony",
   methods: {
-    ...mapMutations(["setShowForm"]),
+    ...mapMutations("form", ["setShowForm"]),
   },
 };
 </script>

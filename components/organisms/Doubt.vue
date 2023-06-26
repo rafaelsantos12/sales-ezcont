@@ -98,7 +98,7 @@ export default {
     };
   },
   methods: {
-    ...mapMutations(["setShowForm"]),
+    ...mapMutations("form", ["setShowForm"]),
   },
 };
 </script>

@@ -137,6 +137,7 @@ export default {
   transform: translateX(100%);
   transition: box-shadow 1s, transform 1s;
   border-bottom-left-radius: 40px;
+  border-top-left-radius: 40px;
 }
 
 .header-nav-mobile.show {
