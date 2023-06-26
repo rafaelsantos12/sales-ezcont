@@ -10,7 +10,7 @@
 </template>
 <script>
 export default {
-  name: "ButtonCustom",
+  name: "AtomButton",
   props: {
     width: {
       type: String,

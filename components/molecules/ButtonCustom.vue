@@ -111,6 +111,5 @@ export default {
 .button-custom:hover .icon-button {
   background: var(--backgroundIconHover) !important;
   color: var(--colorIconHover) !important;
-  transition-delay: 0.1s;
 }
 </style>

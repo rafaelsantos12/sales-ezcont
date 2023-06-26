@@ -209,8 +209,12 @@
               </div>
             </div>
             <table class="table plan">
-              <tr v-for="(item, indexPlan) in itensPlan" :key="indexPlan">
-                <td class="table-td td-plan">
+              <tr>
+                <td
+                  v-for="(item, indexPlan) in plan.itensPlan"
+                  :key="indexPlan"
+                  class="table-td td-plan"
+                >
                   <AtomTitle
                     class="title-plan"
                     font-family="Inter, sans-serif"
@@ -310,6 +314,65 @@ export default {
           tag: false,
           for: "afiliado",
           info: "Faturamento: R$0,00 - R$25.000,00",
+          itensPlan: [
+            {
+              title: "Imposto de renda dos sócios/empresa",
+              info: false,
+            },
+            {
+              title: "Abertura de empresa",
+              info: true,
+              text: "---",
+            },
+            {
+              title: "Conciliação financeira e contábil",
+              info: true,
+              text: "---",
+            },
+            {
+              title: "Fechamento fiscal e contábil",
+              info: true,
+              text: "01 conta",
+            },
+            {
+              title: "Fechamento de imposto de renda PJ",
+              info: true,
+              text: "---",
+            },
+            {
+              title: "Escritório e secretária virtual",
+              info: true,
+              text: "---",
+            },
+            {
+              title: "Domicílio fiscal",
+              info: true,
+              text: "---",
+            },
+            {
+              title: "Contabilização automatizada de comissões",
+              info: true,
+              text: "---",
+            },
+            {
+              title: "Emissão de NF ilimitadas",
+              info: false,
+            },
+            {
+              title: "Suporte e-mail / chat",
+              info: true,
+              text: "---",
+            },
+            {
+              title: "Suporte especializado",
+              info: false,
+            },
+            {
+              title: "Suporte especializado",
+              info: true,
+              text: "---",
+            },
+          ],
         },
         {
           type: "PROFISSIONAL",
@@ -319,6 +382,63 @@ export default {
           tag: true,
           for: "afiliado",
           info: "Faturamento: R$25.000,00 - R$75.000,00",
+          itensPlan: [
+            {
+              title: "Imposto de renda dos sócios/empresa",
+              info: false,
+            },
+            {
+              title: "Abertura de empresa",
+              info: true,
+              text: "---",
+            },
+            {
+              title: "Conciliação financeira e contábil",
+              info: true,
+              text: "---",
+            },
+            {
+              title: "Fechamento fiscal e contábil",
+              info: true,
+              text: "02 conta",
+            },
+            {
+              title: "Fechamento de imposto de renda PJ",
+              info: false,
+            },
+            {
+              title: "Escritório e secretária virtual",
+              info: true,
+              text: "---",
+            },
+            {
+              title: "Domicílio fiscal",
+              info: true,
+              text: "---",
+            },
+            {
+              title: "Contabilização automatizada de comissões",
+              info: false,
+            },
+            {
+              title: "Emissão de NF ilimitadas",
+              info: false,
+            },
+            {
+              title: "Suporte e-mail / chat",
+              info: true,
+              text: "---",
+            },
+            {
+              title: "Suporte especializado",
+              info: false,
+            },
+            {
+              title: "Suporte especializado",
+              info: true,
+              text: "---",
+            },
+          ],
         },
         {
           type: "AVANÇADO",
@@ -328,6 +448,59 @@ export default {
           tag: false,
           for: "afiliado",
           info: "Faturamento: R$75.000,00 - R$300.000,00",
+          itensPlan: [
+            {
+              title: "Imposto de renda dos sócios/empresa",
+              info: false,
+            },
+            {
+              title: "Abertura de empresa",
+              info: false,
+            },
+            {
+              title: "Conciliação financeira e contábil",
+              info: true,
+              text: "---",
+            },
+            {
+              title: "Fechamento fiscal e contábil",
+              info: true,
+              text: "05 conta",
+            },
+            {
+              title: "Fechamento de imposto de renda PJ",
+              info: false,
+            },
+            {
+              title: "Escritório e secretária virtual",
+              info: false,
+            },
+            {
+              title: "Domicílio fiscal",
+              info: false,
+            },
+            {
+              title: "Contabilização automatizada de comissões",
+              info: false,
+            },
+            {
+              title: "Emissão de NF ilimitadas",
+              info: false,
+            },
+            {
+              title: "Suporte e-mail / chat",
+              info: true,
+              text: "---",
+            },
+            {
+              title: "Suporte especializado",
+              info: false,
+            },
+            {
+              title: "Suporte especializado",
+              info: false,
+            },
+          ],
         },
         {
           type: "PREMIUM",
@@ -337,60 +510,227 @@ export default {
           tag: false,
           for: "produtor",
           info: "Recomendado para produtores",
+          itensPlan: [
+            {
+              title: "Imposto de renda dos sócios/empresa",
+              info: false,
+            },
+            {
+              title: "Abertura de empresa",
+              info: false,
+            },
+            {
+              title: "Conciliação financeira e contábil",
+              info: false,
+            },
+            {
+              title: "Fechamento fiscal e contábil",
+              info: true,
+              text: "05 conta",
+            },
+            {
+              title: "Fechamento de imposto de renda PJ",
+              info: false,
+            },
+            {
+              title: "Escritório e secretária virtual",
+              info: false,
+            },
+            {
+              title: "Domicílio fiscal",
+              info: false,
+            },
+            {
+              title: "Contabilização automatizada de comissões",
+              info: false,
+            },
+            {
+              title: "Emissão de NF ilimitadas",
+              info: false,
+            },
+            {
+              title: "Suporte e-mail / chat",
+              info: false,
+            },
+            {
+              title: "Suporte especializado",
+              info: false,
+            },
+            {
+              title: "Suporte especializado",
+              info: false,
+            },
+          ],
         },
       ],
       tabActive: false,
+
       itensPlan: [
+        {},
         {
-          title: "Imposto de renda PJ e PF",
-          info: true,
-          text: "--",
+          plans: [
+            {
+              title: "Imposto de renda dos sócios/empresa",
+              info: false,
+            },
+            {
+              title: "Abertura de empresa",
+              info: false,
+            },
+            {
+              title: "Conciliação financeira e contábil",
+              info: false,
+            },
+            {
+              title: "Fechamento fiscal e contábil",
+              info: false,
+            },
+            {
+              title: "Fechamento de imposto de renda PJ",
+              info: false,
+            },
+            {
+              title: "Escritório e secretária virtual",
+              info: false,
+            },
+            {
+              title: "Domicílio fiscal",
+              info: true,
+              text: "2 contas",
+            },
+            {
+              title: "Contabilização automatizada de comissões",
+              info: false,
+            },
+            {
+              title: "Emissão de NF ilimitadas",
+              info: false,
+            },
+            {
+              title: "Suporte e-mail / chat",
+              info: false,
+            },
+            {
+              title: "Suporte especializado",
+              info: true,
+              text: "5 contas",
+            },
+            {
+              title: "Suporte especializado",
+              info: true,
+              text: "5 contas",
+            },
+          ],
         },
         {
-          title: "Imposto de renda dos sócios/empresa",
-          info: false,
+          plans: [
+            {
+              title: "Imposto de renda dos sócios/empresa",
+              info: false,
+            },
+            {
+              title: "Abertura de empresa",
+              info: false,
+            },
+            {
+              title: "Conciliação financeira e contábil",
+              info: false,
+            },
+            {
+              title: "Fechamento fiscal e contábil",
+              info: false,
+            },
+            {
+              title: "Fechamento de imposto de renda PJ",
+              info: false,
+            },
+            {
+              title: "Escritório e secretária virtual",
+              info: false,
+            },
+            {
+              title: "Domicílio fiscal",
+              info: true,
+              text: "2 contas",
+            },
+            {
+              title: "Contabilização automatizada de comissões",
+              info: false,
+            },
+            {
+              title: "Emissão de NF ilimitadas",
+              info: false,
+            },
+            {
+              title: "Suporte e-mail / chat",
+              info: false,
+            },
+            {
+              title: "Suporte especializado",
+              info: true,
+              text: "5 contas",
+            },
+            {
+              title: "Suporte especializado",
+              info: true,
+              text: "5 contas",
+            },
+          ],
         },
         {
-          title: "Abertura de empresa",
-          info: false,
-        },
-        {
-          title: "Conciliação financeira e contábil",
-          info: false,
-        },
-        {
-          title: "Fechamento fiscal e contábil",
-          info: false,
-        },
-        {
-          title: "Fechamento de imposto de renda PJ",
-          info: false,
-        },
-        {
-          title: "Escritório e secretária virtual",
-          info: false,
-        },
-        {
-          title: "Domicílio fiscal",
-          info: true,
-          text: "2 contas",
-        },
-        {
-          title: "Contabilização automatizada de comissões",
-          info: false,
-        },
-        {
-          title: "Emissão de NF ilimitadas",
-          info: false,
-        },
-        {
-          title: "Suporte e-mail / chat",
-          info: false,
-        },
-        {
-          title: "Suporte especializado",
-          info: true,
-          text: "5 contas",
+          plans: [
+            {
+              title: "Imposto de renda dos sócios/empresa",
+              info: false,
+            },
+            {
+              title: "Abertura de empresa",
+              info: false,
+            },
+            {
+              title: "Conciliação financeira e contábil",
+              info: false,
+            },
+            {
+              title: "Fechamento fiscal e contábil",
+              info: false,
+            },
+            {
+              title: "Fechamento de imposto de renda PJ",
+              info: false,
+            },
+            {
+              title: "Escritório e secretária virtual",
+              info: false,
+            },
+            {
+              title: "Domicílio fiscal",
+              info: true,
+              text: "2 contas",
+            },
+            {
+              title: "Contabilização automatizada de comissões",
+              info: false,
+            },
+            {
+              title: "Emissão de NF ilimitadas",
+              info: false,
+            },
+            {
+              title: "Suporte e-mail / chat",
+              info: false,
+            },
+            {
+              title: "Suporte especializado",
+              info: true,
+              text: "5 contas",
+            },
+            {
+              title: "Suporte especializado",
+              info: true,
+              text: "5 contas",
+            },
+          ],
         },
       ],
     };
@@ -622,6 +962,10 @@ export default {
   .wrapper-right {
     overflow: hidden;
     overflow-x: scroll;
+  }
+
+  .title-plan {
+    display: flex;
   }
 }
 </style>
