@@ -29,6 +29,7 @@
         <MoleculeButtonCustom
           text="Falar com especialista"
           icon="arrow-top-right"
+          @click="setShowForm(true)"
         />
       </div>
       <div class="wrapper-cards">
@@ -68,8 +69,12 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   name: "OrganismAdvantage",
+  methods: {
+    ...mapMutations("form", ["setShowForm"]),
+  },
 };
 </script>
 

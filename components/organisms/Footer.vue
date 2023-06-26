@@ -37,6 +37,7 @@
         color-icon="var(--light1100)"
         hover-border-color="var(--dark100)"
         color-icon-hover="var(--primary600)"
+        @click="setShowForm(true)"
       />
     </div>
     <AtomLineDivision color="var(--dark200)" class="line-division" />
@@ -66,8 +67,12 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   name: "OrganismFooter",
+  methods: {
+    ...mapMutations("form", ["setShowForm"]),
+  },
 };
 </script>
 

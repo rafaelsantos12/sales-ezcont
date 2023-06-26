@@ -13,6 +13,7 @@
       color-hover="var(--light1100)"
       :hover-bg-color="hoverBgColor"
       class="button-custom"
+      @click="$emit('click')"
     >
       {{ text }}
 

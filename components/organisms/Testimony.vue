@@ -27,6 +27,7 @@
           color-icon="var(--light1100)"
           hover-border-color="var(--dark100)"
           color-icon-hover="var(--primary600)"
+          @click="setShowForm(true)"
         />
       </div>
       <div class="wrapper-right">
@@ -107,8 +108,12 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   name: "OrganismTestimony",
+  methods: {
+    ...mapMutations(["setShowForm"]),
+  },
 };
 </script>
 

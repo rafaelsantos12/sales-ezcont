@@ -39,6 +39,7 @@
         <MoleculeButtonCustom
           text="Quero começar agora"
           icon="arrow-top-right"
+          @click="setShowForm(true)"
         />
       </div>
     </div>
@@ -47,8 +48,12 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   name: "OrganismHeader",
+  methods: {
+    ...mapMutations("form", ["setShowForm"]),
+  },
 };
 </script>
 

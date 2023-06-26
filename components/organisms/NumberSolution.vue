@@ -34,6 +34,7 @@
           color-icon="var(--light1100)"
           hover-border-color="var(--dark100)"
           color-icon-hover="var(--primary600)"
+          @click="setShowForm(true)"
         />
       </div>
       <div class="wrapper-solution">
@@ -81,8 +82,12 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   name: "NumberSolution",
+  methods: {
+    ...mapMutations("form", ["setShowForm"]),
+  },
 };
 </script>
 
