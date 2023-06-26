@@ -120,6 +120,15 @@ export default {
   gap: 24px;
 }
 
+@media (max-width: 1199.98px) {
+  .wrapper-container {
+    grid-template-columns: auto;
+  }
+  .embed-container {
+    width: 100%;
+  }
+}
+
 @media (max-width: 767.98px) {
   .section-works {
     padding: 0 32px 120px;

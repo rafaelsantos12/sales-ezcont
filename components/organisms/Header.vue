@@ -2,7 +2,12 @@
   <section class="section-header">
     <div class="wrapper-header">
       <div class="wrapper-image">
-        <AtomImageCustom src="/images/model.png" width="100%" height="100%" />
+        <AtomImageCustom
+          src="/images/model.png"
+          width="100%"
+          height="100%"
+          class="image-header"
+        />
       </div>
       <div class="wrapper-text">
         <div class="text-header">
@@ -56,17 +61,16 @@ export default {
   background-repeat: no-repeat;
   background-position: right;
   background-position: 0 100%;
-  background-size: 74%;
+  background-size: 64%;
   position: relative;
 }
 
 .wrapper-header {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: auto 700px;
   padding: 206px 0 0;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 110px;
 }
 
 .gradient {
@@ -97,15 +101,25 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  max-width: 600px;
 }
 
 .wrapper-image {
   margin-bottom: -10px;
 }
 
+.image-header {
+  margin-left: -65px;
+}
+
 @media (max-width: 1199.98px) {
   .wrapper-header {
-    grid-template-columns: auto;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .image-header {
+    margin-left: 0px;
   }
 }
 
