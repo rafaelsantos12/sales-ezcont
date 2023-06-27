@@ -208,6 +208,25 @@ export default {
   display: none;
 }
 
+@media (max-width: 1119.98px) {
+  .container {
+    padding: 0 64px;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .wrapper-actions {
+    display: none;
+  }
+
+  .button-mobile {
+    display: flex;
+    align-items: center;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-list {
     display: none;

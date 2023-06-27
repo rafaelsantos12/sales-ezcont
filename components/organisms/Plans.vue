@@ -946,6 +946,29 @@ export default {
   display: none;
 }
 
+@media (max-width: 1199.98px) {
+  .section-plans {
+    padding: 80px 80px 80px;
+  }
+
+  .wrapper-container {
+    grid-template-columns: auto;
+  }
+
+  .wrapper-right {
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+
+  .title-plan {
+    display: flex;
+  }
+
+  .table.left {
+    display: none;
+  }
+}
+
 @media (max-width: 767.98px) {
   .section-plans {
     padding: 80px 32px 80px;

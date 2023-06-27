@@ -123,6 +123,26 @@ export default {
   gap: 32px;
 }
 
+@media (max-width: 1199.98px) {
+  .section-advantage {
+    padding: 120px 80px 80px;
+  }
+
+  .wrapper-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 40px;
+  }
+
+  .wrapper-text {
+    gap: 40px;
+  }
+
+  .wrapper-cards {
+    gap: 40px;
+  }
+}
+
 @media (max-width: 767.98px) {
   .section-advantage {
     padding: 120px 32px 80px;

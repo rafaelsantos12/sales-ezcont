@@ -170,7 +170,7 @@ export default {
   z-index: 99;
   position: fixed;
   bottom: 0;
-  transform: translateY(100%);
+  transform: translateY(200%);
   width: 100%;
   transition: box-shadow 1s, transform 1s;
 }

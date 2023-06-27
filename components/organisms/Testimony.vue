@@ -178,6 +178,16 @@ export default {
   margin-bottom: 180px;
 }
 
+@media (max-width: 1199.98px) {
+  .wrapper-container {
+    padding: 0 32px;
+  }
+
+  .wrapper-container {
+    grid-template-columns: auto;
+  }
+}
+
 @media (max-width: 767.98px) {
   .section-testimony {
     padding: 0 32px;
