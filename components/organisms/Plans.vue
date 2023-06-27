@@ -899,7 +899,6 @@ export default {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   background: #152031;
-  max-width: 174px;
   height: 279px;
   justify-content: center;
 }
