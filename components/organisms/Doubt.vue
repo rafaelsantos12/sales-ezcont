@@ -188,5 +188,9 @@ export default {
   .wrapper-main {
     grid-template-columns: auto;
   }
+
+  .wrapper-left {
+    margin-bottom: 388px;
+  }
 }
 </style>

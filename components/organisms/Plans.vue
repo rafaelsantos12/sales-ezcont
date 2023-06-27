@@ -830,6 +830,14 @@ export default {
   background-color: var(--dark100);
 }
 
+.table.plan td {
+  background-color: var(--dark200);
+}
+
+.table.plan td:nth-child(even) {
+  background-color: var(--dark100);
+}
+
 .plan {
   opacity: 1;
   transition: 0.3s;
