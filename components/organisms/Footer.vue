@@ -59,6 +59,7 @@
         font-size="var(--fontSizeTextP4)"
         font-family="Inter, sans-serif"
         font-weight="300"
+        :to="{ name: 'termos' }"
       >
         Termos de Uso e Privacidade
       </AtomInternalLink>
@@ -91,7 +92,7 @@ export default {
   gap: 56px;
   padding: 80px 208px;
   background: var(--primary600);
-  height: 429px;
+
   border-radius: 20px;
   align-items: center;
   background-image: url("/images/bg-footer.svg");
