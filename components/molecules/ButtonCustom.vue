@@ -6,7 +6,7 @@
       :bg-color="bgColor"
       color="var(--light1100)"
       font-size="var(--fontSizeTextP3)"
-      font-weight="500"
+      font-weight="600"
       height="68px"
       :border-color="borderColor"
       :hover-border-color="hoverBorderColor"
@@ -106,6 +106,13 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.5s;
+}
+
+.icon {
+  zoom: 1.4;
+  margin-top: -4px;
+  margin-left: 4px;
 }
 
 .button-custom:hover .icon-button {

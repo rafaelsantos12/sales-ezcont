@@ -19,6 +19,7 @@
               color="var(--light1100)"
               line-height="140%"
               class="title-header"
+              font-weight="500"
             >
               Contabilidade digital para produtores, afiliados e negócios
               digitais!

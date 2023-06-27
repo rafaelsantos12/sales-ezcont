@@ -94,6 +94,7 @@ export default {
   font-weight: var(--fontWeight);
   font-size: var(--fontSize);
   font-style: normal;
+  transition: 0.5s;
 }
 
 .button:hover {

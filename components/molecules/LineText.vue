@@ -5,6 +5,7 @@
       color="var(--dark600)"
       font-family="Inter, sans-serif"
       type="text-p5"
+      font-weight="500"
     >
       {{ text }}
     </AtomParagraph>

@@ -52,7 +52,16 @@
               >
                 {{ item.title }}
               </AtomTitle>
-              <AtomIcon v-if="item.info" name="info" color="var(--dark500)" />
+              <AtomIcon
+                v-if="item.info"
+                name="info"
+                class="info-table"
+                color="var(--dark500)"
+                cursor="pointer"
+              />
+              <div v-if="item.info" class="ballon-info-table">
+                {{ item.text }}
+              </div>
             </td>
           </tr>
         </table>
@@ -259,6 +268,7 @@ export default {
         {
           title: "Imposto de renda PJ e PF",
           info: true,
+          text: "PF - Relativo às operações da empresa",
         },
         {
           title: "Imposto de renda dos sócios/empresa",
@@ -287,6 +297,7 @@ export default {
         {
           title: "Domicílio fiscal",
           info: true,
+          text: "A empresa em nosso endereço",
         },
         {
           title: "Contabilização automatizada de comissões",
@@ -303,6 +314,7 @@ export default {
         {
           title: "Suporte especializado",
           info: true,
+          text: "Todos os meios de atendimento: e-mail, chat, WhatsApp e telefone",
         },
       ],
       plans: [
@@ -812,6 +824,7 @@ export default {
   width: 100%;
   text-align: center;
   overflow: hidden;
+  position: relative;
 }
 
 .table-td {
@@ -952,6 +965,40 @@ export default {
 
 .info:hover ~ .ballon-info.disabled-info-producer {
   display: none;
+}
+
+.info-table:hover ~ .ballon-info-table {
+  display: block;
+}
+
+.ballon-info-table {
+  display: none;
+  margin: 0 auto;
+  text-align: center;
+  background: #cad2db;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 22.4px;
+  border-radius: 10px;
+  width: 216px;
+  height: auto;
+  color: #152031;
+  padding: 16px;
+  margin-top: 134px;
+  position: absolute;
+  right: 0;
+}
+
+.ballon-info-table:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #cad2db;
+  top: -9px;
+  left: 172px;
 }
 
 @media (max-width: 1199.98px) {
