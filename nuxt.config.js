@@ -13,8 +13,65 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Contabilidade digital para produtores, afiliados e negócios digitais!",
+      },
       { name: "format-detection", content: "telephone=no" },
+
+      { property: "og:site_name", content: "EzCont" },
+      { hid: "og:type", property: "og:type", content: "website" },
+      {
+        hid: "og:url",
+        property: "og:url",
+        content: "https://ezcont.com.br",
+      },
+      {
+        hid: "og:title",
+        property: "og:title",
+        content:
+          "EzCont - A única contabilidade para produtores, afiliados e negócios digitais!",
+      },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content:
+          "Contabilidade digital para produtores, afiliados e negócios digitais!",
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: "/images/og.png",
+      },
+      { property: "og:image:width", content: "740" },
+      { property: "og:image:height", content: "300" },
+
+      { name: "twitter:site", content: "@ezcont" },
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        hid: "twitter:url",
+        name: "twitter:url",
+        content: "https://ezcont.com.br",
+      },
+      {
+        hid: "twitter:title",
+        name: "twitter:title",
+        content:
+          "EzCont - A única contabilidade para produtores, afiliados e negócios digitais!",
+      },
+      {
+        hid: "twitter:description",
+        name: "twitter:description",
+        content:
+          "Contabilidade digital para produtores, afiliados e negócios digitais!",
+      },
+      {
+        hid: "twitter:image",
+        name: "twitter:image",
+        content: "/images/og.png",
+      },
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/images/favicon.svg" },
