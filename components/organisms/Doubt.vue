@@ -51,7 +51,7 @@
             type="text-p3"
             font-weight="400"
             line-height="28.8px"
-            color="var(--dark500)"
+            color="var(--dark400)"
             font-family="Inter, sans-serif"
           >
             {{ item.text }}
@@ -78,15 +78,11 @@ export default {
           text: "Nossa plataforma foi desenvolvida para simplificar todos os processos contábeis, desde a abertura da empresa até a emissão de notas fiscais e relatórios. Tudo é feito de forma intuitiva, descomplicada e segura.",
         },
         {
-          title: " A EzCont atende somente empresas?",
-          text: "Sim! Você pode personalizar, programar e disparar mensagens ilimitadas para os seus leads de forma automática e super rápida.",
+          title: "A EzCont atende somente empresas?",
+          text: "Não! Além de atender empresas, a EzCont tem como foco negócios e empreendedores digitais. Temos diversas soluções contábeis que automatizam processos e simplificam a burocracia financeira de quem empreende online.",
         },
         {
-          title: "Meu computador precisa estar ligado 24h?",
-          text: "Não. Além de atender empresas, a EzCont tem como foco negócios e empreendedores digitais. Temos diversas soluções contábeis que automatizam processos e simplificam a burocracia de quem empreende online.",
-        },
-        {
-          title: "Quanto o valor do serviço de contabilidade da EzCont?",
+          title: "Qual o valor do serviço de contabilidade da EzCont?",
           text: "O custo do serviço de contabilidade da EzCont varia de acordo com o plano escolhido e as necessidades específicas do seu negócio.",
         },
         {

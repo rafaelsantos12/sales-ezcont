@@ -412,7 +412,7 @@ export default {
             {
               title: "Fechamento fiscal e contábil",
               info: true,
-              text: "02 conta",
+              text: "02 contas",
             },
             {
               title: "Fechamento de imposto de renda PJ",
@@ -538,7 +538,7 @@ export default {
             {
               title: "Fechamento fiscal e contábil",
               info: true,
-              text: "05 conta",
+              text: "05 contas",
             },
             {
               title: "Fechamento de imposto de renda PJ",
@@ -762,7 +762,7 @@ export default {
 
 .wrapper-container {
   display: grid;
-  grid-template-columns: 520px auto;
+  grid-template-columns: auto auto;
   grid-template-rows: auto;
   max-width: 1200px;
   margin: 0 auto;
@@ -900,7 +900,7 @@ export default {
   border-top-right-radius: 20px;
   background: #152031;
   height: 279px;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .plan-top.tag {
@@ -944,6 +944,12 @@ export default {
   padding: 16px;
   margin-top: 100px;
   position: absolute;
+}
+
+.price{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .ballon-info:after {

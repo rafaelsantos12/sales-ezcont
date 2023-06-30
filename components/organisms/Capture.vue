@@ -167,7 +167,7 @@ export default {
   height: 705px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-  z-index: 99;
+  z-index: 999;
   position: fixed;
   bottom: 0;
   transform: translateY(200%);
