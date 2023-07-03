@@ -131,6 +131,7 @@
         </AtomButton>
       </div>
     </div>
+   
   </section>
 </template>
 
@@ -262,6 +263,7 @@ export default {
 .button-close.mobile {
   display: none;
 }
+
 
 @media (max-width: 768px) {
   .comment-capture {

@@ -74,13 +74,5 @@ export default {
   .about-title {
     text-align: center !important;
   }
-
-  .characteristics {
-    justify-content: center;
-  }
-
-  .description {
-    text-align: center !important;
-  }
 }
 </style>

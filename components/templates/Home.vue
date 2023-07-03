@@ -47,4 +47,10 @@ export default {
   padding: 0px 112px;
   background-color: var(--light1100);
 }
+
+@media (max-width: 768px) {
+  .division {
+    padding: 64px 24px 48px;
+  }
+}
 </style>

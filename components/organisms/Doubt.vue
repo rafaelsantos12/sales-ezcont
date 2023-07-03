@@ -38,6 +38,7 @@
           color-icon="var(--light1100)"
           hover-border-color="var(--dark100)"
           color-icon-hover="var(--primary600)"
+          class="button-fale-desktop"
           @click="setShowForm(true)"
         />
       </div>
@@ -57,6 +58,20 @@
             {{ item.text }}
           </AtomParagraph>
         </MoleculeAccordion>
+        <MoleculeButtonCustom
+          text="Fale com a gente"
+          icon="arrow-top-right"
+          bg-color="var(--dark100)"
+          border-color="var(--dark100)"
+          hover-bg-color="var(--dark100)"
+          background-icon="var(--primary600)"
+          background-icon-hover="var(--light1100)"
+          color-icon="var(--light1100)"
+          hover-border-color="var(--dark100)"
+          color-icon-hover="var(--primary600)"
+          class="button-fale-mobile"
+          @click="setShowForm(true)"
+        />
       </div>
     </div>
   </section>
@@ -144,9 +159,11 @@ export default {
   gap: 16px;
 }
 
-.button-mobile {
+.button-fale-mobile {
   display: none !important;
 }
+
+
 
 @media (max-width: 1024px) {
   .wrapper-case {
@@ -163,11 +180,11 @@ export default {
     top: 0;
   }
 
-  .button-mobile {
+  .button-fale-mobile{
     display: flex !important;
   }
 
-  .button-desk {
+  .button-fale-desktop {
     display: none !important;
   }
 
@@ -186,7 +203,7 @@ export default {
   }
 
   .wrapper-left {
-    margin-bottom: 388px;
+    margin-bottom: 288px;
   }
 }
 </style>

@@ -47,6 +47,7 @@
         type="text-p5"
         font-family="Inter, sans-serif"
         font-weight="300"
+        class="paragraph-bottom"
       >
         © Copyright 2023. Todos os direitos reservados.
       </AtomParagraph>
@@ -136,6 +137,13 @@ export default {
 
   .paragraph {
     font-size: 16px !important;
+  }
+  .wrapper-bottom{
+    flex-direction: column;
+    gap: 16px;
+  }
+  .paragraph-bottom{
+    text-align: center !important;
   }
 }
 </style>

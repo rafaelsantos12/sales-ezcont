@@ -34,8 +34,10 @@
           color-icon="var(--light1100)"
           hover-border-color="var(--dark100)"
           color-icon-hover="var(--primary600)"
+           class="button-solution-desktop"
           @click="setShowForm(true)"
         />
+
       </div>
       <div class="wrapper-solution">
         <div class="wrapper-text">
@@ -76,6 +78,20 @@
             icon-name="money"
           />
         </div>
+        <MoleculeButtonCustom
+          text="Quero estas soluções"
+          icon="arrow-top-right"
+          bg-color="var(--dark100)"
+          border-color="var(--dark100)"
+          hover-bg-color="var(--dark100)"
+          background-icon="var(--primary600)"
+          background-icon-hover="var(--light1100)"
+          color-icon="var(--light1100)"
+          hover-border-color="var(--dark100)"
+          color-icon-hover="var(--primary600)"
+           class="button-solution-mobile"
+          @click="setShowForm(true)"
+        />
       </div>
     </div>
   </section>
@@ -135,13 +151,14 @@ export default {
   gap: 32px;
 }
 
+.button-solution-mobile {
+  display: none;
+}
+
 @media (max-width: 1199.98px) {
   .wrapper-container {
     grid-template-columns: auto;
   }
-}
-
-@media (max-width: 991.98px) {
 }
 
 @media (max-width: 767.98px) {
@@ -160,12 +177,22 @@ export default {
     overflow: hidden;
     overflow-x: scroll;
     padding-bottom: 36px;
+    padding-top: 30px;
   }
 
   .wrapper-solution {
     overflow: hidden;
     overflow-x: scroll;
     width: 100%;
+    gap: 40px;
+  }
+
+  .button-solution-mobile {
+    display: flex;
+  }
+
+  .button-solution-desktop {
+    display: none;
   }
 }
 </style>

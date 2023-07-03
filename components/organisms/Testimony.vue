@@ -11,6 +11,7 @@
               color="var(--dark100)"
               line-height="140%"
               font-weight="500"
+              class="title"
             >
               Centenas de negócios cresceram com as finanças em ordem!
             </AtomTitle>
@@ -27,6 +28,7 @@
           color-icon="var(--light1100)"
           hover-border-color="var(--dark100)"
           color-icon-hover="var(--primary600)"
+          class="button-testimony-desktop"
           @click="setShowForm(true)"
         />
       </div>
@@ -103,6 +105,21 @@
           profile="CEO da WebOnline"
         />
       </div>
+
+       <MoleculeButtonCustom
+          text="Acelerar meu negócio"
+          icon="arrow-top-right"
+          bg-color="var(--dark100)"
+          border-color="var(--dark100)"
+          hover-bg-color="var(--dark100)"
+          background-icon="var(--primary600)"
+          background-icon-hover="var(--light1100)"
+          color-icon="var(--light1100)"
+          hover-border-color="var(--dark100)"
+          color-icon-hover="var(--primary600)"
+          class="button-testimony-mobile"
+          @click="setShowForm(true)"
+        />
     </div>
   </section>
 </template>
@@ -178,10 +195,11 @@ export default {
   margin-bottom: 180px;
 }
 
+.button-testimony-mobile{
+  display: none;
+}
+
 @media (max-width: 1199.98px) {
-  .wrapper-container {
-    padding: 0 32px;
-  }
 
   .wrapper-container {
     grid-template-columns: auto;
@@ -194,11 +212,33 @@ export default {
   }
 
   .wrapper-container {
-    padding: 0 32px;
+    grid-template-columns: auto;
+    padding: 64px 0 16px;
   }
 
-  .wrapper-container {
-    grid-template-columns: auto;
+  .wrapper-left{
+    padding-bottom: 48px;
+  }
+
+  .title{
+    font-size: 24px !important;
+  }
+
+  .button-testimony-mobile{
+    display: block;
+    margin-top: 50px;
+  }
+
+  .button-testimony-desktop{
+    display: none;
+  }
+
+  .card-comment-testimony{
+    margin-bottom: 0;
+  }
+
+  .wrapper-right::before{
+    bottom: 110px;
   }
 }
 </style>

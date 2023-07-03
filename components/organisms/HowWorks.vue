@@ -8,6 +8,7 @@
           color="var(--dark400)"
           line-height="56px"
           font-weight="500"
+          class="title"
         >
           Quem utiliza a EzCont, confia e recomenda!
         </AtomTitle>
@@ -35,8 +36,11 @@
           color-icon="var(--light1100)"
           hover-border-color="var(--dark100)"
           color-icon-hover="var(--primary600)"
-          @click="setShowForm(true)"
+          class="button-garantir-desktop"
+          @click="setShowForm(true)"  
         />
+
+        <AtomLineDivision color="var(--light900)" class="division-work" />
       </div>
       <div class="wrapper-how">
         <div class="top-how">
@@ -71,6 +75,20 @@
           height="100%"
         />
       </div>
+      <MoleculeButtonCustom
+          text="Garantir agora mesmo"
+          icon="arrow-top-right"
+          bg-color="var(--dark100)"
+          border-color="var(--dark100)"
+          hover-bg-color="var(--dark100)"
+          background-icon="var(--primary600)"
+          background-icon-hover="var(--light1100)"
+          color-icon="var(--light1100)"
+          hover-border-color="var(--dark100)"
+          color-icon-hover="var(--primary600)"
+           class="button-garantir-mobile"
+          @click="setShowForm(true)"
+        />
     </div>
   </section>
 </template>
@@ -125,6 +143,14 @@ export default {
   gap: 24px;
 }
 
+.button-garantir-mobile{
+  display: none;
+}
+
+.division-work{
+  display: none;
+}
+
 @media (max-width: 1199.98px) {
   .wrapper-container {
     grid-template-columns: auto;
@@ -145,6 +171,28 @@ export default {
 
   .wrapper-container {
     grid-template-columns: auto;
+    gap: 64px;
+  }
+
+  .title{
+    font-size: 32px !important;
+  }
+
+  .wrapper-comment{
+    gap: 32px;
+  }
+
+  .button-garantir-desktop{
+    display: none;
+  }
+
+  .button-garantir-mobile{
+    display: block;
+  }
+
+  .division-work{
+    margin-top: 48px;
+    display: block;
   }
 }
 </style>

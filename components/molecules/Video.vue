@@ -162,10 +162,16 @@ iframe {
 @media (max-width: 768px) {
   .embed-container {
     width: 100%;
+    background-size: contain;
+    padding-bottom: 200px;
   }
 
   .modal-content {
     width: 100%;
+  }
+
+  .play{
+    zoom: 0.7;
   }
 }
 </style>

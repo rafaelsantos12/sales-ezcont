@@ -10,6 +10,7 @@
         color="var(--light1100)"
         line-height="140%"
         font-weight="500"
+        class="title"
       >
         {{ title }}
       </AtomTitle>
@@ -76,5 +77,16 @@ export default {
   left: 30px;
   top: -24px;
   background: var(--primary600);
+}
+
+@media (max-width: 768px) {
+  .wrapper-card-advantage {
+    min-width: 262px;
+    padding: 50px 24px 24px;
+  }
+
+  .title{
+    font-size: 20px !important;
+  }
 }
 </style>

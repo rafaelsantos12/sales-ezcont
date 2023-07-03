@@ -29,6 +29,7 @@
         <MoleculeButtonCustom
           text="Falar com especialista"
           icon="arrow-top-right"
+          class="button-advantage-desktop"
           @click="setShowForm(true)"
         />
       </div>
@@ -40,6 +41,15 @@
             digitais que desejam otimizar as finanças 
             e simplificar processos."
             icon-name="money-white"
+            class="card-advantage-desktop"
+          />
+           <MoleculeCardAdvantage
+            title="Empreendedores"
+            description="Desenvolvido para negócios 
+            digitais que desejam simplificar seus 
+            processos."
+            icon-name="money-white"
+            class="card-advantage-mobile"
           />
           <MoleculeCardAdvantage
             title="De qualquer lugar"
@@ -64,6 +74,12 @@
           />
         </div>
       </div>
+      <MoleculeButtonCustom
+          text="Falar com especialista"
+          icon="arrow-top-right"
+          class="button-advantage-mobile"
+          @click="setShowForm(true)"
+      />
     </div>
   </section>
 </template>
@@ -123,6 +139,14 @@ export default {
   gap: 32px;
 }
 
+.button-advantage-mobile{
+  display: none;
+}
+
+.card-advantage-mobile{
+  display: none !important;
+}
+
 @media (max-width: 1199.98px) {
   .section-advantage {
     padding: 120px 80px 80px;
@@ -152,8 +176,32 @@ export default {
     grid-template-columns: auto;
   }
 
-  .cards {
-    flex-direction: column;
+  .button-advantage-desktop{
+    display: none;
   }
+
+  .button-advantage-mobile{
+    display: block;
+  }
+
+  .wrapper-cards{
+    overflow: hidden;
+    overflow-x: scroll;
+    flex-direction: row;
+    padding-bottom: 30px;
+  }
+
+  .cards {
+    padding-top: 25px;
+  }
+
+  .card-advantage-mobile{
+    display: block !important;
+  }
+
+  .card-advantage-desktop{
+    display: none !important;
+  }
+
 }
 </style>

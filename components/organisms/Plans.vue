@@ -1022,6 +1022,7 @@ export default {
 
   .title-plan {
     display: flex;
+    max-width: 205px;
   }
 
   .table.left {
@@ -1049,6 +1050,27 @@ export default {
 
   .title-plan {
     display: flex;
+  }
+
+  .wrapper-tabs{
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+
+  .wrapper-plan {
+    overflow: hidden;
+    overflow-x: scroll;
+    grid-gap: 30px;
+    padding-bottom: 30px;
+    padding-top: 25px;
+  }
+
+  .td-plan{
+    justify-content: space-between;
+  }
+
+  .plan{
+    min-width: 311px;
   }
 }
 </style>
