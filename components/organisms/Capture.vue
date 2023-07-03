@@ -130,6 +130,8 @@
           Quero começar agora
         </AtomButton>
       </div>
+
+      <div style="position: fixed; background:#000; height:100px"></div>
     </div>
    
   </section>
@@ -295,6 +297,9 @@ export default {
   .wrapper-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    max-height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
   }
 
   .close-desktop {
