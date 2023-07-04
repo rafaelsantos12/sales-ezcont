@@ -120,7 +120,10 @@ export default {
 @media (max-width: 1199.98px) {
   .wrapper-header {
     display: flex;
-    flex-direction: column-reverse;
+  }
+
+  .title-header {
+    font-size: var(--fontSizeTitleH5) !important;
   }
 
   .image-header {
