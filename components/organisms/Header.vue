@@ -123,12 +123,13 @@ export default {
   }
 
   .title-header {
-    font-size: var(--fontSizeTitleH5) !important;
+    font-size: 30px !important;
   }
 
   .image-header {
     margin-left: 0px;
     margin-top: 56px;
+    max-width: 400px
   }
 }
 
