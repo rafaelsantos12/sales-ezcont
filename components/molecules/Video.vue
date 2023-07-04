@@ -15,11 +15,12 @@
           width="560"
           height="315"
           :src="src"
-          title="YouTube video player"
+          title="Vídeo apresentação"
           frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allow="autoplay; fullscreen; picture-in-picture"
           allowfullscreen
         ></iframe>
+        
       </div>
     </div>
   </div>

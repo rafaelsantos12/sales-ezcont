@@ -305,5 +305,9 @@ export default {
   .close-desktop {
     display: none !important;
   }
+
+  .section-capture{
+    height: 95%;
+  }
 }
 </style>
