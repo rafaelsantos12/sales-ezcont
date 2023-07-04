@@ -151,7 +151,6 @@ export default {
 
 .nav-list {
   display: flex;
-  flex-flow: wrap;
   gap: 24px min(50px, 3vw);
 }
 

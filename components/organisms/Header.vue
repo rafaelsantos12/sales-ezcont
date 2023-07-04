@@ -4,8 +4,6 @@
       <div class="wrapper-image">
         <AtomImageCustom
           src="/images/model.png"
-          width="100%"
-          height="100%"
           class="image-header"
         />
       </div>
@@ -116,6 +114,7 @@ export default {
 
 .image-header {
   margin-left: -65px;
+  width: auto !important;
 }
 
 @media (max-width: 1199.98px) {
@@ -141,9 +140,14 @@ export default {
     padding: 0 32px;
   }
 
+  .image-header{
+    width: 100% !important;
+  }
+
   .wrapper-header {
     display: flex;
     flex-direction: column-reverse;
+    padding: 160px 0 0;
   }
 
   .title-header {

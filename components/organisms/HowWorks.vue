@@ -113,7 +113,7 @@ export default {
 .wrapper-container {
   display: grid;
   grid-template-columns: 384px 696px;
-  gap: 136px;
+  justify-content: space-between;
   grid-template-rows: auto;
   max-width: 1200px;
   margin: 0 auto;
