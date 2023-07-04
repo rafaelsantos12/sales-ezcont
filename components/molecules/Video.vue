@@ -40,6 +40,18 @@ export default {
       modalVisible: false,
     };
   },
+
+  watch: {
+    modalVisible: function (value) {
+      const iframeElement = document.querySelector('iframe');
+      if (!value) {
+        iframeElement.src = '';
+        return;
+      } 
+      iframeElement.src = this.src;
+    },
+  },
+
 };
 </script>
 
