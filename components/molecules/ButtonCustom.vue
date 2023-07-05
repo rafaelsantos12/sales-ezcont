@@ -91,9 +91,8 @@ export default {
 .button-custom {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 24px;
-  padding: 0 0 0 24px;
+  justify-content: space-between;
+  padding: 8px 8px 8px 24px;
 }
 
 .icon-button {

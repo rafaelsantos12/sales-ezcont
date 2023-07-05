@@ -163,6 +163,9 @@ export default {
   display: none !important;
 }
 
+.button-fale-desktop{
+  
+}
 
 
 @media (max-width: 1024px) {
