@@ -1,7 +1,6 @@
 <template>
   <div id="dropdown-wrapper" class="dropdown-wrapper" tabindex="1">
     <span>{{ value }}</span>
-
     <ul class="dropdown-list">
       <li v-for="(option, index) in options" :key="index">
         <a href="#">{{ option }}</a>
@@ -33,6 +32,7 @@ export default {
     const links = document.querySelectorAll(".dropdown-list a");
 
     dd.addEventListener("click", function () {
+      console.log("click");
       this.classList.toggle("is-active");
     });
 

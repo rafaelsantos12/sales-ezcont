@@ -199,7 +199,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 48px;
-  max-width: 1440px;
+  max-width: 1216px;
   padding: 160px 112px;
   margin: 0 auto;
 }

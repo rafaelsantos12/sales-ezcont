@@ -73,7 +73,7 @@ export default {
   display: grid;
   grid-template-columns: auto 700px;
   padding: 206px 0 0;
-  max-width: 1200px;
+  max-width: 1216px;
   margin: 0 auto;
 }
 

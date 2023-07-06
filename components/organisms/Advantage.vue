@@ -105,7 +105,7 @@ export default {
   display: grid;
   grid-template-columns: 384px 696px;
   grid-template-rows: auto;
-  max-width: 1200px;
+  max-width: 1216px;
   margin: 0 auto;
   justify-content: space-between;
 }

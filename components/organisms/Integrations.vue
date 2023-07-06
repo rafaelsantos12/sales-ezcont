@@ -36,7 +36,7 @@
         width="100%"
         class="selo-logo"
       />
-      <AtomImageCustom src="/images/braip.svg" width="50%" class="selo-logo" />
+      <AtomImageCustom src="/images/braip.svg" width="50%" class="logo-braip" />
     </div>
   </section>
 </template>
@@ -52,8 +52,8 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 48px;
-  max-width: 1440px;
-  padding: 80px 112px;
+  max-width: 1216px;
+  padding: 80px 0px;
   margin: 0 auto;
 }
 
@@ -65,6 +65,11 @@ export default {
 }
 
 .selo-logo {
+  margin: 0 auto;
+  max-width: 140px;
+}
+
+.logo-braip{
   margin: 0 auto;
   max-width: 100px;
 }

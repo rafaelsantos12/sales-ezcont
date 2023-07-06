@@ -32,11 +32,11 @@
           icon="arrow-top-right"
           bg-color="var(--dark100)"
           border-color="var(--dark100)"
-          hover-bg-color="var(--dark100)"
+          hover-bg-color="var(--dark300)"
           background-icon="var(--primary600)"
           background-icon-hover="var(--light1100)"
           color-icon="var(--light1100)"
-          hover-border-color="var(--dark100)"
+          hover-border-color="var(--dark300)"
           color-icon-hover="var(--primary600)"
           class="button-fale-desktop"
           @click="setShowForm(true)"
@@ -121,7 +121,7 @@ export default {
   gap: 24px;
   padding: 120px 0;
   position: relative;
-  max-width: 1200px;
+  max-width: 1216px;
   margin: 0 auto;
 }
 

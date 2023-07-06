@@ -130,8 +130,6 @@
           Quero começar agora
         </AtomButton>
       </div>
-
-      <div style="position: fixed; background:#000; height:100px"></div>
     </div>
    
   </section>
@@ -167,7 +165,7 @@ export default {
   position: relative;
   position: absolute;
   margin: 0 auto;
-  height: 705px;
+  height: 100%;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   z-index: 999;
@@ -193,6 +191,7 @@ export default {
   top: 0;
   transition: opacity 1s;
   width: 100%;
+ 
 }
 
 .wrapper-container {

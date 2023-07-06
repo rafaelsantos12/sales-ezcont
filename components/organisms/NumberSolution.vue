@@ -28,11 +28,11 @@
           icon="arrow-top-right"
           bg-color="var(--dark100)"
           border-color="var(--dark100)"
-          hover-bg-color="var(--dark100)"
+          hover-bg-color="var(--dark300)"
           background-icon="var(--primary600)"
           background-icon-hover="var(--light1100)"
           color-icon="var(--light1100)"
-          hover-border-color="var(--dark100)"
+          hover-border-color="var(--dark300)"
           color-icon-hover="var(--primary600)"
            class="button-solution-desktop"
           @click="setShowForm(true)"
@@ -83,11 +83,11 @@
           icon="arrow-top-right"
           bg-color="var(--dark100)"
           border-color="var(--dark100)"
-          hover-bg-color="var(--dark100)"
+          hover-bg-color="var(--dark300)"
           background-icon="var(--primary600)"
           background-icon-hover="var(--light1100)"
           color-icon="var(--light1100)"
-          hover-border-color="var(--dark100)"
+          hover-border-color="var(--dark300)"
           color-icon-hover="var(--primary600)"
            class="button-solution-mobile"
           @click="setShowForm(true)"
@@ -120,7 +120,7 @@ export default {
   display: grid;
   grid-template-columns: auto 696px;
   grid-template-rows: auto;
-  max-width: 1200px;
+  max-width: 1216px;
   margin: 0 auto;
   padding: 120px 0 0;
 }

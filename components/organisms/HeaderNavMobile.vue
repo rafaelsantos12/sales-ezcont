@@ -68,6 +68,7 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   name: "HeaderNavMobile",
   props: {
@@ -116,9 +117,13 @@ export default {
     this.activeMenuMobile = this.activeMobile;
   },
   methods: {
+    ...mapMutations("form", ["setShowForm"]),
     clickCloseModal() {
       this.activeMenuMobile = false;
       this.$emit("clickCloseModal");
+    },
+    app() {
+      window.open("https://app.ezcont.com.br/login", "_blank");
     },
   },
 };
