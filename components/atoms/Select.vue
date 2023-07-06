@@ -1,8 +1,13 @@
 <template>
-  <div id="dropdown-wrapper" class="dropdown-wrapper" tabindex="1">
+  <div id="dropdown-wrapper" 
+  class="dropdown-wrapper" 
+  :class="{'is-active': isDropdown}" 
+  tabindex="1"
+  @click="toggleDropdown" 
+  >
     <span>{{ value }}</span>
     <ul class="dropdown-list">
-      <li v-for="(option, index) in options" :key="index">
+      <li v-for="(option, index) in options" :key="index" @click="select(option)">
         <a href="#">{{ option }}</a>
       </li>
     </ul>
@@ -25,25 +30,19 @@ export default {
   data() {
     return {
       value: this.label,
+      isDropdown: false,
     };
   },
-  mounted() {
-    const dd = document.querySelector("#dropdown-wrapper");
-    const links = document.querySelectorAll(".dropdown-list a");
-
-    console.log(links, dd);
-
-    dd.addEventListener("click", function () {
-      console.log(this.classList);
-      this.classList.toggle("is-active");
-    });
-
-    links.forEach((element) => {
-      element.addEventListener("click", function (evt) {
-        this.value = evt.currentTarget.textContent;
-      });
-    });
-  },
+  methods: {
+    toggleDropdown() {
+      console.log('aqui')
+      this.isDropdown = !this.isDropdown;
+    },
+    select(option) {
+      this.value = option;
+      this.$emit("input", option);
+    },
+  }
 };
 </script>
 
@@ -102,7 +101,7 @@ export default {
   list-style: none;
   transition: all 0.3s ease-out;
   /* Hiding */
-  max-height: 0;
+  max-height: 0px;
   overflow: hidden;
   z-index: 99;
 }

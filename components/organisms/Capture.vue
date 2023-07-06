@@ -86,20 +86,23 @@
           Preencha seus dados abaixo
         </AtomTitle>
 
-        <div class="wrapper-form">
-          <AtomSelect
-            label="Plano de interesse"
-            :options="['Iniciante', 'Profissional', 'Avançado', 'Premium']"
-          />
-          <AtomInput label="Nome" type="text" />
-          <div class="wrapper-email-tel">
-            <AtomInput label="Email" type="email" />
-            <AtomInput label="Telefone" type="tel" />
-          </div>
-          <AtomSelect
-            label="Onde os conheceu"
-            :options="['Iniciante', 'Profissional', 'Avançado', 'Premium']"
-          />
+        <div class="form" >
+          <form class="wrapper-form">
+              <AtomSelect
+                label="Plano de interesse"
+                :options="['Iniciante', 'Profissional', 'Avançado', 'Premium']"
+              />
+              <AtomInput label="Nome" type="text" />
+              <div class="wrapper-email-tel">
+                <AtomInput label="Email" type="email" />
+                <AtomInput label="Telefone" type="tel" />
+              </div>
+              <AtomSelect
+                label="Onde nos conheceu"
+                :options="['Instagram', 'Indicação', 'Eventos', 'Outros']" 
+                Facebook
+              />
+            </form>
 
           <div class="wrapper-check">
             <input id="vehicle1" type="checkbox" name="vehicle1" value="Bike" />
@@ -110,7 +113,7 @@
               line-height="140%"
               font-weight="400"
             >
-              Eu declaro que li e concordo com os <a>termos de uso</a>.
+              Eu declaro que li e concordo com os <NuxtLink :to="{ name: 'termos' }" class="link">termos de uso.</NuxtLink>
             </AtomParagraph>
           </div>
         </div>
@@ -194,6 +197,12 @@ export default {
  
 }
 
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .wrapper-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -265,6 +274,10 @@ export default {
   display: none;
 }
 
+
+.link{
+  text-decoration: underline;
+}
 
 @media (max-width: 768px) {
   .comment-capture {
