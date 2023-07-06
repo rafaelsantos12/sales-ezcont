@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper-button">
+  <div class="wrapper-button" >
     <AtomButton
       :style="cssVars"
       border-radius="100px"
@@ -13,6 +13,7 @@
       color-hover="var(--light1100)"
       :hover-bg-color="hoverBgColor"
       class="button-custom"
+      :class="{'box-shadow': hasShadow}"
       @click="$emit('click')"
     >
       {{ text }}
@@ -68,6 +69,10 @@ export default {
       type: String,
       default: "var(--light1100)",
     },
+    hasShadow: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -88,11 +93,16 @@ export default {
   width: 312px;
 }
 
+
 .button-custom {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 8px 8px 8px 24px;
+}
+
+.button-custom.box-shadow:hover {
+  box-shadow: 0 0 35px 2px rgba(0,0,0,0.24);
 }
 
 .icon-button {

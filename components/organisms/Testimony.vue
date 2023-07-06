@@ -29,6 +29,7 @@
           hover-border-color="var(--dark300)"
           color-icon-hover="var(--primary600)"
           class="button-testimony-desktop"
+          has-shadow
           @click="setShowForm(true)"
         />
       </div>

@@ -31,8 +31,10 @@ export default {
     const dd = document.querySelector("#dropdown-wrapper");
     const links = document.querySelectorAll(".dropdown-list a");
 
+    console.log(links, dd);
+
     dd.addEventListener("click", function () {
-      console.log("click");
+      console.log(this.classList);
       this.classList.toggle("is-active");
     });
 

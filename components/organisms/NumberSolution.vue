@@ -34,7 +34,8 @@
           color-icon="var(--light1100)"
           hover-border-color="var(--dark300)"
           color-icon-hover="var(--primary600)"
-           class="button-solution-desktop"
+          class="button-solution-desktop"
+          has-shadow
           @click="setShowForm(true)"
         />
 
