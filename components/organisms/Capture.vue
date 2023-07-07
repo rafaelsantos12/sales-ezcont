@@ -91,6 +91,12 @@
               <input type="hidden" name="token_rdstation" value="71c4bce481c504bcf4b7c1d11d94f4e3" />
               <input type="hidden" name="identificador" value="ezcont-form" />
               <input type="hidden" name="redirect_to" value="https://ezcont.vercel.app" />
+              <select name="cf_plano_de_interesse" id="cf_plano_de_interesse">
+                <option value="Iniciante">Iniciante</option>
+                <option value="Profissional">Profissional</option>
+                <option value="Avançado">Avançado</option>
+                <option value="Premium">Premium</option>
+              </select>
               <AtomSelect
                 label="Plano de interesse"
                 :options="['Iniciante', 'Profissional', 'Avançado', 'Premium']"
