@@ -87,14 +87,15 @@
         </AtomTitle>
 
         <div class="form" >
-          <!-- <form action="https://www.rdstation.com.br/api/1.2/conversions" method="POST" class="wrapper-form">
-              <AtomInput type="hidden" name="toke_rdstation" value="71c4bce481c504bcf4b7c1d11d94f4e3"/>
+          <form action="https://www.rdstation.com.br/api/1.2/conversions" method="POST" class="wrapper-form">
+              <input type="hidden" name="token_rdstation" value="71c4bce481c504bcf4b7c1d11d94f4e3" />
+              <input type="hidden" name="identificador" value="ezcont-form" />
+              <input type="hidden" name="redirect_to" value="https://ezcont.vercel.app" />
               <AtomSelect
                 label="Plano de interesse"
                 :options="['Iniciante', 'Profissional', 'Avançado', 'Premium']"
               />
               <AtomInput label="Nome" type="text" name="name"/>
-             
               <div class="wrapper-email-tel">
                 <AtomInput label="Email" type="email" name="email" />
                 <AtomInput label="Telefone" type="tel" name="tel" />
@@ -104,55 +105,35 @@
                 :options="['Instagram', 'Indicação', 'Eventos', 'Outros']" 
                 Facebook
               />
-              <AtomInput type="hidden" name="identificador" value="Landing Page - Contato"/>
-          </form> -->
-
-           <form action="https://www.rdstation.com.br/api/1.2/conversions" method="POST">
-                <input type="hidden" name="token_rdstation" value="71c4bce481c504bcf4b7c1d11d94f4e3" />
-                <input type="hidden" name="identificador" value="teste-html-puro" />
-                <input type="hidden" name="redirect_to" value="https://ezcont.vercel.app" />
-                <div class="field">
-                  <label>E-mail:*</label>
-                  <input type="text" name="email" />
-                </div>
-                <div class="field">
-                  <label>Nome:*</label>
-                  <input type="text" name="nome" />
-                </div>
-                <div class="actions">
-                  <input type="hidden" name="c_utmz" id="c_utmz" value="" />
-                  <input type="submit" value="Enviar" />
-                </div>
-            </form>
-          <div class="wrapper-check">
-            <input id="vehicle1" type="checkbox" name="vehicle1" value="Bike" />
-            <AtomParagraph
-              font-family="Inter, sans-serif"
-              type="text-p5"
-              color="var(--dark500)"
-              line-height="140%"
-              font-weight="400"
+              <div class="wrapper-check">
+                <input id="vehicle1" type="checkbox" name="vehicle1" value="true" />
+                <AtomParagraph
+                  font-family="Inter, sans-serif"
+                  type="text-p5"
+                  color="var(--dark500)"
+                  line-height="140%"
+                  font-weight="400"
+                >
+                  Eu declaro que li e concordo com os <NuxtLink :to="{ name: 'termos' }" class="link">termos de uso.</NuxtLink>
+                </AtomParagraph>
+              </div>
+            <AtomButton
+              border-radius="100px"
+              bg-color="var(--primary600)"
+              color="var(--light1100)"
+              color-hover="var(--light1100)"
+              font-size="var(--fontSizeTextP5)"
+              font-weight="500"
+              height="48px"
+              border-color="var(--primary600)"
+              hover-border-color="var(--primary900)"
+              hover-bg-color="var(--primary900)"
+              type="submit"
             >
-              Eu declaro que li e concordo com os <NuxtLink :to="{ name: 'termos' }" class="link">termos de uso.</NuxtLink>
-            </AtomParagraph>
-          </div>
+              Quero começar agora
+            </AtomButton>
+          </form>
         </div>
-
-        <AtomButton
-          border-radius="100px"
-          bg-color="var(--primary600)"
-          color="var(--light1100)"
-          color-hover="var(--light1100)"
-          font-size="var(--fontSizeTextP5)"
-          font-weight="500"
-          height="48px"
-          border-color="var(--primary600)"
-          hover-border-color="var(--primary900)"
-          hover-bg-color="var(--primary900)"
-          type="submit"
-        >
-          Quero começar agora
-        </AtomButton>
       </div>
     </div>
    
