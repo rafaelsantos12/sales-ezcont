@@ -2,7 +2,7 @@
   <button
     class="button"
     type="button"
-    :style="varCSS"
+    :style="varStyle"
     @click="$emit('click', $event)"
   >
     <slot />
@@ -62,7 +62,7 @@ export default {
     },
   },
   computed: {
-    varCSS() {
+    varStyle() {
       return {
         "--width": this.width,
         "--height": this.height,

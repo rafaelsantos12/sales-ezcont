@@ -1,5 +1,5 @@
 <template>
-  <NuxtImg v-if="src" :src="src" :alt="alt" :style="varCSS" class="image" />
+  <NuxtImg v-if="src" :src="src" :alt="alt" :style="varStyle" class="image" />
 </template>
 
 <script>
@@ -34,7 +34,7 @@ export default {
     },
   },
   computed: {
-    varCSS() {
+    varStyle() {
       return {
         "--width": this.width,
         "--height": this.height,

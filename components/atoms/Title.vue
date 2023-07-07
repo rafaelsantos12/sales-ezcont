@@ -1,5 +1,5 @@
 <template>
-  <component :is="tag" :style="varCSS" class="title">
+  <component :is="tag" :style="varStyle" class="title">
     <slot />
   </component>
 </template>
@@ -38,7 +38,7 @@ export default {
     },
   },
   computed: {
-    varCSS() {
+    varStyle() {
       return {
         "--fontSize": this.fontSize,
         "--fontWeight": this.fontWeight,

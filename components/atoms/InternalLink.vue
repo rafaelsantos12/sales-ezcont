@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="to || href" class="link" :style="varCSS">
+  <NuxtLink :to="to || href" class="link" :style="varStyle">
     <slot />
   </NuxtLink>
 </template>
@@ -41,7 +41,7 @@ export default {
     },
   },
   computed: {
-    varCSS() {
+    varStyle() {
       return {
         "--fontSize": this.fontSize,
         "--fontWeight": this.fontWeight,

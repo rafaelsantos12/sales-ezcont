@@ -11,7 +11,7 @@
         :name="name"
         class="input"
          required
-        :style="varCSS"
+        :style="varStyle"
         @focus="showLabel = true"
         @focusout="showLabel = false"
         @input="onInput($event)"
@@ -73,7 +73,7 @@ export default {
     };
   },
   computed: {
-    varCSS() {
+    varStyle() {
       return {
         "--width": this.width,
         "--height": this.height,

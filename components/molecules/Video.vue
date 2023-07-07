@@ -71,7 +71,7 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("/images/reuniao.jpeg");
+  url("/images/reuniao.jpeg");
   border-radius: 20px;
 }
 
