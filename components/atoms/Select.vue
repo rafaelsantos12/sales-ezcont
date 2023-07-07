@@ -35,7 +35,6 @@ export default {
   },
   methods: {
     toggleDropdown() {
-      console.log('aqui')
       this.isDropdown = !this.isDropdown;
     },
     select(option) {
