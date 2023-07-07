@@ -8,7 +8,7 @@
     <span>{{ value }}</span>
     <ul class="dropdown-list">
       <li v-for="(option, index) in options" :key="index" @click="select(option)">
-        <a href="#">{{ option }}</a>
+        <span>{{ option }}</span>
       </li>
     </ul>
   </div>
@@ -107,13 +107,13 @@ export default {
 .dropdown-list li {
   padding: 0 10px;
 }
-.dropdown-list li:hover a {
+.dropdown-list li:hover span {
   color: var(--primary900);
 }
 .dropdown-list li:last-of-type a {
   border: none;
 }
-.dropdown-list a {
+.dropdown-list span {
   display: block;
   text-decoration: none;
   color: #657080;

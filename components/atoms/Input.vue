@@ -2,7 +2,7 @@
   <div class="form-input">
     <div class="wrapper-input" :class="{ 'show-label': showLabel || value }">
       <label class="label-placeholder">
-        {{ label }}
+        {{ label }} 
       </label>
       <input
         :type="type"
@@ -84,7 +84,7 @@ export default {
     },
   },
   watch: {
-    inputValue(newValue) {
+    value(newValue) {
       this.inputValue = newValue;
     },
   },

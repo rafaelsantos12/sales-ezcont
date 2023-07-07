@@ -95,15 +95,33 @@
                 label="Plano de interesse"
                 :options="['Iniciante', 'Profissional', 'Avançado', 'Premium']"
               />
-              <AtomInput label="Nome" type="text" name="name"/>
+              <AtomInput 
+                label="Nome" 
+                type="text" 
+                name="name" 
+                :value="name"
+                @input="name = $event"
+              />
               <div class="wrapper-email-tel">
-                <AtomInput label="Email" type="email" name="email" />
-                <AtomInput label="Telefone" type="tel" name="tel" />
+                <AtomInput 
+                  label="Email" 
+                  type="email" 
+                  name="email"
+                  :value="email"
+                  @input="email = $event"
+                />
+                <AtomInput 
+                  label="Telefone" 
+                  type="number" 
+                  name="telefone" 
+                  :value="tel"
+                  @input="tel = $event"
+                />
               </div>
               <AtomSelect
                 label="Onde nos conheceu"
-                :options="['Instagram', 'Indicação', 'Eventos', 'Outros']" 
-                Facebook
+                :options="['Instagram', ' Facebook','Indicação', 'Eventos', 'Outros']" 
+               
               />
               <div class="wrapper-check">
                 <input id="vehicle1" type="checkbox" name="vehicle1" value="true" />
@@ -117,21 +135,21 @@
                   Eu declaro que li e concordo com os <NuxtLink :to="{ name: 'termos' }" class="link">termos de uso.</NuxtLink>
                 </AtomParagraph>
               </div>
-            <AtomButton
-              border-radius="100px"
-              bg-color="var(--primary600)"
-              color="var(--light1100)"
-              color-hover="var(--light1100)"
-              font-size="var(--fontSizeTextP5)"
-              font-weight="500"
-              height="48px"
-              border-color="var(--primary600)"
-              hover-border-color="var(--primary900)"
-              hover-bg-color="var(--primary900)"
-              type="submit"
-            >
-              Quero começar agora
-            </AtomButton>
+              <AtomButton
+                border-radius="100px"
+                bg-color="var(--primary600)"
+                color="var(--light1100)"
+                color-hover="var(--light1100)"
+                font-size="var(--fontSizeTextP5)"
+                font-weight="500"
+                height="48px"
+                border-color="var(--primary600)"
+                hover-border-color="var(--primary900)"
+                hover-bg-color="var(--primary900)"
+                type="submit"
+              >
+                Quero começar agora
+              </AtomButton>
           </form>
         </div>
       </div>
@@ -148,6 +166,12 @@ export default {
     return {
       isShowEffect: this.showForm,
       show: this.showForm,
+      name: "",
+      email: "",
+      tel: "",
+      plan: "",
+      where: "",
+      terms: false,  
     };
   },
   computed: {
@@ -157,7 +181,7 @@ export default {
     showForm(value) {
       this.isShowEffect = value;
       this.show = value;
-    },
+    },    
   },
   methods: {
     ...mapMutations("form", ["setShowForm"]),
