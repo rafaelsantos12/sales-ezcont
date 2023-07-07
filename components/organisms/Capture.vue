@@ -129,6 +129,7 @@
           border-color="var(--primary600)"
           hover-border-color="var(--primary900)"
           hover-bg-color="var(--primary900)"
+          type="submit"
         >
           Quero começar agora
         </AtomButton>

@@ -748,7 +748,7 @@ export default {
     };
   },
   methods: {
-    ...mapMutations("form", ["setShowForm"]),
+    ...mapMutations("form", ["setShowForm","setPlanSelected"]),
   },
 };
 </script>
