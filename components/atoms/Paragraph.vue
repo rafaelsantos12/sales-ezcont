@@ -2,7 +2,7 @@
   <component
     :is="tag"
     :class="['paragraph', type]"
-    :style="cssVars"
+    :style="varStyle"
     @click="$emit('click')"
   >
     <slot />
@@ -103,7 +103,7 @@ export default {
     },
   },
   computed: {
-    cssVars() {
+    varStyle() {
       return {
         "--color": this.color,
         "--colorHover": this.colorHover,

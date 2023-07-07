@@ -3,7 +3,7 @@
   <div
     class="box"
     :class="{ 'wrapper-background': isBackground }"
-    :style="cssVars"
+    :style="varStyle"
     @click="$emit('click')"
     v-html="src"
   ></div>
@@ -70,7 +70,7 @@ export default {
     src() {
       return require(`~/assets/icons/${this.name}.svg?raw`);
     },
-    cssVars() {
+    varStyle() {
       return {
         "--background": this.background,
         "--margin": this.margin,

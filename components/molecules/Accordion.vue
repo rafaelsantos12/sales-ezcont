@@ -1,5 +1,5 @@
 <template>
-  <div class="accordion" :class="{ isOpen: accIsOpen }" :style="cssVars">
+  <div class="accordion" :class="{ isOpen: accIsOpen }" :style="varStyle">
     <div class="accordion-label" @click="toggleIsOpen">
       <AtomTitle
         color="var(--dark100)"
@@ -46,10 +46,6 @@ export default {
       type: Boolean,
       default: false,
     },
-    zIndex: {
-      type: Number,
-      default: 1,
-    },
   },
   data() {
     return {
@@ -57,7 +53,7 @@ export default {
     };
   },
   computed: {
-    cssVars() {
+    varStyle() {
       return {
         "--zIndex": this.zIndex,
       };
@@ -77,7 +73,6 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 32px;
-  z-index: var(--zIndex);
   max-width: 696px;
   border: 1px solid var(--light900);
   border-radius: 20px;

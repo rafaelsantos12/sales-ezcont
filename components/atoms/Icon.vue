@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper-icon" :style="cssVars" @click="$emit('click')">
+  <div class="wrapper-icon" :style="varStyle" @click="$emit('click')">
     <i :class="`icon gg-${name}`"></i>
   </div>
 </template>
@@ -54,7 +54,7 @@ export default {
     },
   },
   computed: {
-    cssVars() {
+    varStyle() {
       return {
         "--size": this.size,
         "--color": this.color,

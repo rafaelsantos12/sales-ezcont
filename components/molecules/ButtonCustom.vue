@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper-button" >
     <AtomButton
-      :style="cssVars"
+      :style="varStyle"
       border-radius="100px"
       :bg-color="bgColor"
       color="var(--light1100)"
@@ -76,7 +76,7 @@ export default {
   },
 
   computed: {
-    cssVars() {
+    varStyle() {
       return {
         "--backgroundIcon": this.backgroundIcon,
         "--backgroundIconHover": this.backgroundIconHover,

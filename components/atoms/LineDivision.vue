@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper-line" :style="cssVars"></div>
+  <div class="wrapper-line" :style="varStyle"></div>
 </template>
 
 <script>
@@ -28,7 +28,7 @@ export default {
     },
   },
   computed: {
-    cssVars() {
+    varStyle() {
       return {
         "--opacity": this.opacity,
         "--color": this.color,
