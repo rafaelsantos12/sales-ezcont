@@ -10,6 +10,7 @@
         :value="inputValue"
         :name="name"
         class="input"
+         required
         :style="varCSS"
         @focus="showLabel = true"
         @focusout="showLabel = false"
