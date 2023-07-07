@@ -87,21 +87,24 @@
         </AtomTitle>
 
         <div class="form" >
-          <form class="wrapper-form">
+          <form action="https://www.rdstation.com.br/api/1.2/conversions" method="POST" class="wrapper-form">
+              <AtomInput type="hidden" name="toke_rdstation" value="71c4bce481c504bcf4b7c1d11d94f4e3"/>
               <AtomSelect
                 label="Plano de interesse"
                 :options="['Iniciante', 'Profissional', 'Avançado', 'Premium']"
               />
-              <AtomInput label="Nome" type="text" />
+              <AtomInput label="Nome" type="text" name="name"/>
+             
               <div class="wrapper-email-tel">
-                <AtomInput label="Email" type="email" />
-                <AtomInput label="Telefone" type="tel" />
+                <AtomInput label="Email" type="email" name="email" />
+                <AtomInput label="Telefone" type="tel" name="tel" />
               </div>
               <AtomSelect
                 label="Onde nos conheceu"
                 :options="['Instagram', 'Indicação', 'Eventos', 'Outros']" 
                 Facebook
               />
+              <AtomInput type="hidden" name="identificador" value="Landing Page - Contato"/>
             </form>
 
           <div class="wrapper-check">

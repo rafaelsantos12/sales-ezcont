@@ -8,6 +8,7 @@
         :type="type"
         :placeholder="placeholder"
         :value="inputValue"
+        :name="name"
         class="input"
         :style="varCSS"
         @focus="showLabel = true"
@@ -28,6 +29,10 @@ export default {
     type: {
       type: String,
       required: true,
+    },
+    name: {
+      type: String,
+      default: "",
     },
     value: {
       type: [String, Number, Boolean],
