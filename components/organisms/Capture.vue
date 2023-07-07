@@ -91,16 +91,14 @@
               <input type="hidden" name="token_rdstation" value="71c4bce481c504bcf4b7c1d11d94f4e3" />
               <input type="hidden" name="identificador" value="ezcont-form" />
               <input type="hidden" name="redirect_to" value="https://ezcont.vercel.app" />
-              <select name="cf_plano_de_interesse" id="cf_plano_de_interesse">
+              <AtomSelect id="cf_plano_de_interesse" name="cf_plano_de_interesse">
+                <option value="" disabled selected>Plano de interesse</option>
                 <option value="Iniciante">Iniciante</option>
                 <option value="Profissional">Profissional</option>
                 <option value="Avançado">Avançado</option>
                 <option value="Premium">Premium</option>
-              </select>
-              <AtomSelect
-                label="Plano de interesse"
-                :options="['Iniciante', 'Profissional', 'Avançado', 'Premium']"
-              />
+              </AtomSelect>
+
               <AtomInput 
                 label="Nome" 
                 type="text" 
@@ -124,11 +122,13 @@
                   @input="tel = $event"
                 />
               </div>
-              <AtomSelect
-                label="Onde nos conheceu"
-                :options="['Instagram', ' Facebook','Indicação', 'Eventos', 'Outros']" 
-               
-              />
+              <AtomSelect id="cf_onde_nos_conheceu" name="cf_onde_nos_conheceu">
+                  <option value="" disabled selected>Onde nos conheceu?</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="Facebook">Facebook</option>
+                  <option value="Indicação">Indicação</option>
+                  <option value="Eventos">Eventos</option>
+              </AtomSelect>
               <div class="wrapper-check">
                 <input id="vehicle1" type="checkbox" name="vehicle1" value="true" />
                 <AtomParagraph

@@ -1,17 +1,7 @@
 <template>
-  <div id="dropdown-wrapper" 
-  class="dropdown-wrapper" 
-  :class="{'is-active': isDropdown}" 
-  tabindex="1"
-  @click="toggleDropdown" 
-  >
-    <span>{{ value }}</span>
-    <ul class="dropdown-list">
-      <li v-for="(option, index) in options" :key="index" @click="select(option)">
-        <span>{{ option }}</span>
-      </li>
-    </ul>
-  </div>
+  <select :name="name" class="dropdown-wrapper" >
+        <slot />
+  </select>
 </template>
 
 <script>
@@ -23,6 +13,10 @@ export default {
       required: true,
     },
     label: {
+      type: String,
+      default: "",
+    },
+    name: {
       type: String,
       default: "",
     },
@@ -48,7 +42,7 @@ export default {
 <style scoped>
 .dropdown-wrapper {
   position: relative;
-  padding: 15px 10px 10px 10px;
+  padding: 10px;
   background: #fff;
   border-radius: 5px;
   cursor: pointer;
@@ -56,7 +50,15 @@ export default {
   outline: none;
   transition: all 0.3s ease-out;
   height: 56px;
+  color: #8383A4;
 }
+
+select:before{
+  margin-right: 10px;
+  content: "";
+}
+
+
 .dropdown-wrapper:after {
   content: "";
   width: 0;
