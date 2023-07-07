@@ -87,7 +87,7 @@
         </AtomTitle>
 
         <div class="form" >
-          <form action="https://www.rdstation.com.br/api/1.2/conversions" method="POST" class="wrapper-form">
+          <!-- <form action="https://www.rdstation.com.br/api/1.2/conversions" method="POST" class="wrapper-form">
               <AtomInput type="hidden" name="toke_rdstation" value="71c4bce481c504bcf4b7c1d11d94f4e3"/>
               <AtomSelect
                 label="Plano de interesse"
@@ -105,8 +105,25 @@
                 Facebook
               />
               <AtomInput type="hidden" name="identificador" value="Landing Page - Contato"/>
-            </form>
+          </form> -->
 
+           <form action="https://www.rdstation.com.br/api/1.2/conversions" method="POST">
+                <input type="hidden" name="token_rdstation" value="71c4bce481c504bcf4b7c1d11d94f4e3" />
+                <input type="hidden" name="identificador" value="teste-html-puro" />
+                <input type="hidden" name="redirect_to" value="https://ezcont.vercel.app" />
+                <div class="field">
+                  <label>E-mail:*</label>
+                  <input type="text" name="email" />
+                </div>
+                <div class="field">
+                  <label>Nome:*</label>
+                  <input type="text" name="nome" />
+                </div>
+                <div class="actions">
+                  <input type="hidden" name="c_utmz" id="c_utmz" value="" />
+                  <input type="submit" value="Enviar" />
+                </div>
+            </form>
           <div class="wrapper-check">
             <input id="vehicle1" type="checkbox" name="vehicle1" value="Bike" />
             <AtomParagraph
