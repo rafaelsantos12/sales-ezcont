@@ -1,6 +1,6 @@
 <template>
-  <div class="accordion" :class="{ isOpen: accIsOpen }" :style="varStyle">
-    <div class="accordion-label" @click="toggleIsOpen">
+  <div class="wrapper-accordion" :class="{ 'is-open': isOpen }">
+    <div class="accordion-header" @click="clickOpen">
       <AtomTitle
         color="var(--dark100)"
         tag="h3"
@@ -22,9 +22,9 @@
           name="math-minus"
           color="var(--primary600)"
           margin="14px 0 0"
-          class="icon"
+          class="icon-minus"
           cursor="pointer"
-          :class="{ active: accIsOpen }"
+          :class="{ active: isOpen }"
         />
       </div>
     </div>
@@ -42,33 +42,22 @@ export default {
       type: String,
       required: true,
     },
-    isOpen: {
-      type: Boolean,
-      default: false,
-    },
   },
   data() {
     return {
-      accIsOpen: this.isOpen,
+      isOpen: false,
     };
   },
-  computed: {
-    varStyle() {
-      return {
-        "--zIndex": this.zIndex,
-      };
-    },
-  },
   methods: {
-    toggleIsOpen() {
-      this.accIsOpen = !this.accIsOpen;
+    clickOpen() {
+      this.isOpen = !this.isOpen;
     },
   },
 };
 </script>
 
 <style scoped>
-.accordion {
+.wrapper-accordion {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -78,7 +67,7 @@ export default {
   border-radius: 20px;
 }
 
-.icon {
+.icon-minus {
   position: absolute;
   right: 0px;
   top: 0px;
@@ -90,7 +79,7 @@ export default {
   transform: rotate(0deg);
 }
 
-.accordion-label {
+.accordion-header {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
@@ -100,36 +89,24 @@ export default {
 .accordion-content {
   display: flex;
   flex-direction: column;
-
   margin: 0;
   transition: margin 1s;
-  animation: closeAccordion 1s forwards;
+  animation: close 1s forwards;
 }
-@keyframes closeAccordion {
-  from {
-    overflow: visible;
-    opacity: 1;
-    max-height: 2000px;
-  }
-  to {
-    overflow: hidden;
-    opacity: 0;
-    max-height: 0;
-  }
-}
-
-.isOpen {
+.is-open {
   background-color: #f9f9f9;
   border-bottom: 0px;
   gap: 32px;
 }
 
-.accordion.isOpen .accordion-content {
+.wrapper-accordion.is-open .accordion-content {
   margin: 15px 0;
   transition: margin 1s;
-  animation: openAccordion 3s forwards;
+  animation: open 3s forwards;
 }
-@keyframes openAccordion {
+
+
+@keyframes open {
   from {
     overflow: hidden;
     opacity: 0;
@@ -139,6 +116,19 @@ export default {
     overflow: visible;
     opacity: 1;
     max-height: 2000px;
+  }
+}
+
+@keyframes close {
+  from {
+    overflow: visible;
+    opacity: 1;
+    max-height: 2000px;
+  }
+  to {
+    overflow: hidden;
+    opacity: 0;
+    max-height: 0;
   }
 }
 
@@ -147,7 +137,7 @@ export default {
     padding: 20px;
   }
 
-  .accordion-label {
+  .accordion-header {
     gap: 5px;
   }
 }

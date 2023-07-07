@@ -73,7 +73,6 @@
 
 <script>
 import { mapMutations } from "vuex";
-import { scrollToElement } from "@/static/utils";
 export default {
   name: "HeaderNav",
   props: {
@@ -111,13 +110,6 @@ export default {
 
   methods: {
     ...mapMutations("form", ["setShowForm"]),
-    click(item) {
-      this.$nextTick(() => {
-        const firstErroMessageEl = this.$el.querySelector("item.to");
-        scrollToElement(firstErroMessageEl);
-      });
-    },
-
     app() {
       window.open("https://app.ezcont.com.br/login", "_blank");
     },
