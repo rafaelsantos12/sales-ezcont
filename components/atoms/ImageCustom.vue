@@ -1,5 +1,5 @@
 <template>
-  <NuxtImg v-if="src" :src="src" :alt="alt" :style="varStyle" class="image" />
+  <img v-if="src" :src="src" :alt="alt" :style="varStyle" class="image" />
 </template>
 
 <script>
