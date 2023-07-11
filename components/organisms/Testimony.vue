@@ -1,5 +1,5 @@
 <template>
-  <section class="section-testimony">
+  <section id="comments" class="section-testimony">
     <div class="wrapper-container">
       <div class="wrapper-left">
         <div class="wrapper-text-button">
@@ -47,6 +47,7 @@
           consectetur. "
           name="Marcos André Vória"
           profile="CEO da WebOnline"
+          class="depoimento"
         />
         <MoleculeComment
           img="/images/avatar.svg"
@@ -61,6 +62,7 @@
           consectetur. "
           name="Marcos André Vória"
           profile="CEO da WebOnline"
+          class="depoimento"
         />
         <MoleculeComment
           img="/images/avatar.svg"
@@ -75,6 +77,7 @@
           consectetur. "
           name="Marcos André Vória"
           profile="CEO da WebOnline"
+          class="depoimento"
         />
         <MoleculeComment
           img="/images/avatar.svg"
@@ -89,9 +92,10 @@
           consectetur. "
           name="Marcos André Vória"
           profile="CEO da WebOnline"
+          class="depoimento"
         />
         <MoleculeComment
-          class="card-comment-testimony"
+          class="card-comment-testimony depoimento"
           img="/images/avatar.svg"
           comment="Lorem ipsum dolor sit amet, cons 
           ectetur adipiscing elit, sed do eiusmod tempor 
@@ -104,6 +108,7 @@
           consectetur. "
           name="Marcos André Vória"
           profile="CEO da WebOnline"
+          
         />
       </div>
 

@@ -9,7 +9,7 @@ export default {
     return {
       script: [
         {
-           src: "https://d335luupugsy2.cloudfront.net/js/loader-scripts/fb89bfb2-6e60-4919-bf4c-27be442c39f8-loader.js",
+           src: "https://d335luupugsy2.cloudfront.net/js/loader-scripts/8fdf4f23-0394-413c-bfa2-90baf10bf052-loader.js",
            body: true,
            async: true,
         }

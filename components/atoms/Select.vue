@@ -8,10 +8,6 @@
 export default {
   name: "AtomSelect",
   props: {
-    options: {
-      type: Array,
-      required: true,
-    },
     label: {
       type: String,
       default: "",
