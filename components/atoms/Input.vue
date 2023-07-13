@@ -127,6 +127,16 @@ input:hover {
   background: #fff;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .wrapper-input {
   position: relative;
   display: flex;

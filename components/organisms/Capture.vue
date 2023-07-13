@@ -355,5 +355,9 @@ export default {
   .section-capture{
     height: 95%;
   }
+
+  .wrapper-email-tel{
+    flex-direction: column;
+  }
 }
 </style>

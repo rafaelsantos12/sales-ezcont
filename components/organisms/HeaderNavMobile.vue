@@ -43,7 +43,7 @@
             hover-bg-color="var(--primary900)"
             @click="setShowForm(true)"
           >
-            Fale com a gente
+            Quero contratar
           </AtomButton>
           <AtomButton
             border-radius="100px"
