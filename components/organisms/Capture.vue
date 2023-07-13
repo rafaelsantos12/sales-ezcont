@@ -51,13 +51,12 @@
           </div>
         </div>
         <MoleculeComment
-          img="/images/avatar.svg"
-          comment="Lorem ipsum dolor sit amet, 
-          cons ectetur adipiscing elit, sed do 
-          eiusmod tempor incididunt ut labore 
-          et dolore magna  "
-          name="Marcos André Vória"
-          profile="CEO da WebOnline"
+          img="/images/avatar-comments/avatar-kelly.png"
+          comment="Não sei como eu vivia sem a EzCont! 
+          Com a ajuda deles, consigo ter uma visão clara das minhas 
+          finanças, emitir notas fiscais com facilidade. "
+          name="Kelly Souza"
+          profile="Afiliada"
           class="comment-capture"
         />
       </div>
@@ -91,13 +90,12 @@
               <input type="hidden" name="token_rdstation" value="21e04d530cda5a7c2567d9426dabcd39" />
               <input type="hidden" name="identificador" value="ezcont-form" />
               <input type="hidden" name="redirect_to" value="https://land.ezcont.com.br/obrigado" />
-              
               <AtomSelect id="cf_plano_de_interesse" name="cf_plano_de_interesse">
-                <option value="" disabled selected>Plano de interesse</option>
-                <option value="Iniciante">Iniciante</option>
-                <option value="Profissional">Profissional</option>
-                <option value="Avançado">Avançado</option>
-                <option value="Premium">Premium</option>
+                <option value="" disabled :selected="optionPlanSelected === null ">Plano de interesse</option>
+                <option value="Iniciante" :selected="optionPlanSelected === 'INICIANTE' ">Iniciante</option>
+                <option value="Profissional" :selected="optionPlanSelected === 'PROFISSIONAL'">Profissional</option>
+                <option value="Avançado" :selected="optionPlanSelected === 'AVANÇADO'">Avançado</option>
+                <option value="Premium" :selected="optionPlanSelected === 'PREMIUM'">Premium</option>
               </AtomSelect>
 
               <AtomInput 
@@ -178,11 +176,14 @@ export default {
       tel: "",
       plan: "",
       where: "",
-      terms: false,  
+      terms: false,
     };
   },
   computed: {
-    ...mapGetters("form", ["showForm"]),
+    ...mapGetters("form", ["showForm","planSelected"]),
+    optionPlanSelected() {
+      return this.planSelected;
+    },
   },
   watch: {
     showForm(value) {

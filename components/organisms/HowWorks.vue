@@ -15,13 +15,13 @@
 
         <div class="comment">
           <MoleculeComment
-            img="/images/avatar.svg"
-            comment="Lorem ipsum dolor sit amet, 
-            cons ectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore 
-            et dolore magna "
-            name="Marcos André Vória"
-            profile="CEO da WebOnline"
+            img="/images/avatar-comments/avatar-gilberto.png"
+            comment="Além de ser muito fácil de mexer, 
+            hoje consigo controlar meu faturamento, 
+            calcular impostos e emitir notas fiscais 
+            com agilidade e segurança."
+            name="Gilberto Vasconcelos"
+            profile="Infoprodutor"
           />
         </div>
 

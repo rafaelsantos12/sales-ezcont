@@ -35,79 +35,52 @@
       </div>
       <div class="wrapper-right">
         <MoleculeComment
-          img="/images/avatar.svg"
-          comment="Lorem ipsum dolor sit amet, cons 
-          ectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit am et. Lorem ipsum dolor 
-          sit amet, consectetur adipiscing elit, sed. 
-          Cons ectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. Lorem 
-          ipsum dolor sit am et. Lorem ipsum dolor sit amet, 
-          consectetur. "
-          name="Marcos André Vória"
-          profile="CEO da WebOnline"
+          img="/images/avatar-comments/avatar-carlos.png"
+          comment="Desde que comecei a utilizar a 
+          ferramenta da EzCont, minha vida financeira
+          nunca mais foi a mesma. É incrível como eles 
+          simplificam todo o processo e me ajudam a manter 
+          as finanças da minha empresa em ordem. 
+          Recomendo de olhos fechados!"
+          name="Carlos Eduardo"
+          profile="Empreededor Digital"
           class="depoimento"
         />
         <MoleculeComment
-          img="/images/avatar.svg"
-          comment="Lorem ipsum dolor sit amet, cons 
-          ectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit am et. Lorem ipsum dolor 
-          sit amet, consectetur adipiscing elit, sed. 
-          Cons ectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. Lorem 
-          ipsum dolor sit am et. Lorem ipsum dolor sit amet, 
-          consectetur. "
-          name="Marcos André Vória"
-          profile="CEO da WebOnline"
+          img="/images/avatar-comments/avatar-kelly.png"
+          comment="Não sei como eu vivia sem a EzCont! 
+          Com a ajuda deles, consigo ter uma visão clara 
+          das minhas finanças, emitir notas fiscais com 
+          facilidade e ainda contar com um suporte especializado. 
+          Não imagino mais minha empresa sem eles!"
+          name="Kelly Souza"
+          profile="Afiliada"
           class="depoimento"
         />
         <MoleculeComment
-          img="/images/avatar.svg"
-          comment="Lorem ipsum dolor sit amet, cons 
-          ectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit am et. Lorem ipsum dolor 
-          sit amet, consectetur adipiscing elit, sed. 
-          Cons ectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. Lorem 
-          ipsum dolor sit am et. Lorem ipsum dolor sit amet, 
-          consectetur. "
-          name="Marcos André Vória"
-          profile="CEO da WebOnline"
+          img="/images/avatar-comments/avatar-rafael.png"
+          comment="Além de ser fácil de usar, com 
+          a EzCont consigo automatizar diversos processos 
+          contábeis, economizando meu tempo e eliminando 
+          erros que eu cometia quando cuidava de tudo sozinho.
+          Hoje tenho total tranquilidade para focar no 
+          crescimento do meu negócio."
+          name="Rafael Almeida"
+          profile="Afiliado de produtos digitais"
           class="depoimento"
         />
-        <MoleculeComment
-          img="/images/avatar.svg"
-          comment="Lorem ipsum dolor sit amet, cons 
-          ectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit am et. Lorem ipsum dolor 
-          sit amet, consectetur adipiscing elit, sed. 
-          Cons ectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. Lorem 
-          ipsum dolor sit am et. Lorem ipsum dolor sit amet, 
-          consectetur. "
-          name="Marcos André Vória"
-          profile="CEO da WebOnline"
-          class="depoimento"
-        />
+    
         <MoleculeComment
           class="card-comment-testimony depoimento"
-          img="/images/avatar.svg"
-          comment="Lorem ipsum dolor sit amet, cons 
-          ectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit am et. Lorem ipsum dolor 
-          sit amet, consectetur adipiscing elit, sed. 
-          Cons ectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. Lorem 
-          ipsum dolor sit am et. Lorem ipsum dolor sit amet, 
-          consectetur. "
-          name="Marcos André Vória"
-          profile="CEO da WebOnline"
+          img="/images/avatar-comments/avatar-gilberto.png"
+          comment="A EzCont revolucionou a forma como 
+          eu gerencio minhas finanças como infoprodutor. 
+          Além de ser muito fácil de mexer, hoje consigo 
+          controlar meu faturamento, calcular impostos e 
+          emitir notas fiscais com agilidade e segurança. 
+          Recomendo a todos do meio digital!"
+          name="Gilberto Vasconcelos"
+          profile="Infoprodutor"
           
         />
       </div>

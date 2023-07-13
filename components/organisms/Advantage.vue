@@ -27,7 +27,7 @@
           </div>
         </div>
         <MoleculeButtonCustom
-          text="Falar com especialista"
+          text="Quero começar agora"
           icon="arrow-top-right"
           class="button-advantage-desktop"
           @click="setShowForm(true)"
@@ -75,7 +75,7 @@
         </div>
       </div>
       <MoleculeButtonCustom
-          text="Falar com especialista"
+          text="Quero começar agora"
           icon="arrow-top-right"
           class="button-advantage-mobile"
           @click="setShowForm(true)"

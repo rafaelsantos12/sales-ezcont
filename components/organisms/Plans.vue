@@ -182,6 +182,7 @@
                   hover-border-color="var(--primary900)"
                   hover-bg-color="var(--primary900)"
                   @click="
+                    setPlanSelected(plan.type);
                     isProducer && plan.for === 'produtor'
                       ? setShowForm(true)
                       : isAffiliate && plan.for === 'afiliado'
@@ -944,6 +945,7 @@ export default {
   padding: 16px;
   margin-top: 100px;
   position: absolute;
+  z-index: 999;
 }
 
 .price{
@@ -992,6 +994,7 @@ export default {
   margin-top: 134px;
   position: absolute;
   right: 0;
+  z-index: 999;
 }
 
 .ballon-info-table:after {
