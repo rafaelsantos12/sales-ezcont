@@ -56,18 +56,6 @@ export default {
     type: {
       type: String,
       default: "text-p1",
-      validator: (value) => {
-        const typesParagraph = [
-          "text-p1",
-          "text-p2",
-          "text-p3",
-          "text-p4",
-          "text-p5",
-          "text-p6",
-        ];
-
-        return typesParagraph.includes(value);
-      },
     },
     overflow: {
       type: String,
