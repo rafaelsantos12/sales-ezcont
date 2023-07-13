@@ -95,7 +95,7 @@
     max-width: 1216px;
     height: -webkit-fill-available;
     margin: 0 auto;
-    background-image: url('/images/icons.png');
+    background-image: url('/images/bg-obrigado.png');
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: contain;
