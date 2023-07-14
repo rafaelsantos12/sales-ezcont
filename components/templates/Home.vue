@@ -22,7 +22,9 @@
 
     <OrganismCapture />
   </div>
+ 
 </template>
+
 
 <script>
 export default {

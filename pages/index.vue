@@ -13,6 +13,7 @@ export default {
            body: true,
            async: true,
         }
+        
       ],
     };
   }

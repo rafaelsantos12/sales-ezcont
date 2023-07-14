@@ -1,5 +1,10 @@
 <template>
   <div class="content">
+    <head>
+      <!-- ... -->
+      <!-- gtm -->
+      <nuxt-gtm></nuxt-gtm>
+    </head>
     <main>
       <OrganismHeaderNav @clickMenuMobile="isActiveMobile = !isActiveMobile" />
       <OrganismHeaderNavMobile

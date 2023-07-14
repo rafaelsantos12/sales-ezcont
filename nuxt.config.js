@@ -132,6 +132,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
+    "@nuxtjs/gtm",
     "@nuxtjs/axios",
     [
       "@nuxt/image",
@@ -141,6 +142,13 @@ export default {
       },
     ],
   ],
+
+  gtm: {
+    id: 'GTM-BG3NHWD',
+    pageTracking: true,
+    enabled: true,
+    debug: false, // Set to true if you want to enable GTM debug mode
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
