@@ -89,7 +89,7 @@
           <form action="https://www.rdstation.com.br/api/1.2/conversions" method="POST" class="wrapper-form">
               <input type="hidden" name="token_rdstation" value="21e04d530cda5a7c2567d9426dabcd39" />
               <input type="hidden" name="identificador" value="ezcont-form" />
-              <input type="hidden" name="redirect_to" value="https://land.ezcont.com.br/obrigado" />
+              <input type="hidden" name="redirect_to" value="https://ezcont.com.br/obrigado" />
               <AtomSelect id="cf_plano_de_interesse" name="cf_plano_de_interesse">
                 <option value="" disabled :selected="optionPlanSelected === null ">Plano de interesse</option>
                 <option value="Iniciante" :selected="optionPlanSelected === 'INICIANTE' ">Iniciante</option>
