@@ -36,7 +36,7 @@
           color-icon-hover="var(--primary600)"
           class="button-solution-desktop"
           has-shadow
-          @click="setShowForm(true)"
+          @click="plan"
         />
 
       </div>
@@ -90,8 +90,8 @@
           color-icon="var(--light1100)"
           hover-border-color="var(--dark300)"
           color-icon-hover="var(--primary600)"
-           class="button-solution-mobile"
-          @click="setShowForm(true)"
+          class="button-solution-mobile"
+          @click="plan"
         />
       </div>
     </div>
@@ -104,6 +104,15 @@ export default {
   name: "NumberSolution",
   methods: {
     ...mapMutations("form", ["setShowForm"]),
+    plan() {
+      const messageErrorEl = this.$nuxt.$el.querySelector('#planos');
+        this.$nextTick(() => {
+            messageErrorEl.scrollIntoView({
+                block: "start",
+                behavior: "smooth",
+            });
+        });
+    },
   },
 };
 </script>

@@ -37,7 +37,7 @@
         color-icon="var(--light1100)"
         hover-border-color="var(--dark100)"
         color-icon-hover="var(--primary600)"
-        @click="setShowForm(true)"
+        @click="plan"
       />
     </div>
     <AtomLineDivision color="var(--dark200)" class="line-division" />
@@ -74,6 +74,15 @@ export default {
   name: "OrganismFooter",
   methods: {
     ...mapMutations("form", ["setShowForm"]),
+    plan() {
+      const messageErrorEl = this.$nuxt.$el.querySelector('#planos');
+        this.$nextTick(() => {
+            messageErrorEl.scrollIntoView({
+                block: "start",
+                behavior: "smooth",
+            });
+        });
+    },
   },
 };
 </script>

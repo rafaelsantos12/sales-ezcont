@@ -53,7 +53,7 @@
           border-color="var(--dark200)"
           hover-border-color="var(--primary900)"
           hover-bg-color="var(--primary900)"
-          @click="setShowForm(true)"
+          @click="plan"
         >
           Quero contratar
         </AtomButton>
@@ -112,6 +112,15 @@ export default {
     ...mapMutations("form", ["setShowForm"]),
     app() {
       window.open("https://app.ezcont.com.br/login", "_blank");
+    },
+    plan() {
+      const messageErrorEl = this.$nuxt.$el.querySelector('#planos');
+        this.$nextTick(() => {
+            messageErrorEl.scrollIntoView({
+                block: "start",
+                behavior: "smooth",
+            });
+        });
     },
   },
 };

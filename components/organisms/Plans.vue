@@ -1,5 +1,5 @@
 <template>
-  <section id="planos" class="section-plans">
+  <section class="section-plans">
     <div class="wrapper-container">
       <div class="wrapper-left">
         <div class="wrapper-title">
@@ -106,7 +106,7 @@
               isProducer = true;
             "
           >
-            Sou produtor
+            Sou Infoprodutor
           </AtomButton>
         </div>
         <div class="wrapper-plan">
@@ -181,14 +181,8 @@
                   border-color="var(--dark200)"
                   hover-border-color="var(--primary900)"
                   hover-bg-color="var(--primary900)"
-                  @click="
-                    setPlanSelected(plan.type);
-                    isProducer && plan.for === 'produtor'
-                      ? setShowForm(true)
-                      : isAffiliate && plan.for === 'afiliado'
-                      ? setShowForm(true)
-                      : null
-                  "
+                  @click="checkout(plan)"
+                  :disabled="isProducer && plan.for === 'afiliado'"
                 >
                   Contratar
                 </AtomButton>
@@ -257,7 +251,7 @@
 </template>
 
 <script>
-import { mapMutations } from "vuex";
+import { mapMutations, mapGetters } from "vuex";
 export default {
   name: "OrganismPlans",
   data() {
@@ -321,6 +315,7 @@ export default {
       plans: [
         {
           type: "INICIANTE",
+          id:'affiliateInitiate',
           priceMonthly: "309",
           priceYearly: "263",
           payment: "mensal",
@@ -389,6 +384,7 @@ export default {
         },
         {
           type: "PROFISSIONAL",
+          id:'affiliateProfessional',
           priceMonthly: "419",
           priceYearly: "356",
           payment: "mensal",
@@ -455,6 +451,7 @@ export default {
         },
         {
           type: "AVANÇADO",
+          id:'affiliateAdvanced',
           priceMonthly: "549",
           priceYearly: "467",
           payment: "mensal",
@@ -517,12 +514,13 @@ export default {
         },
         {
           type: "PREMIUM",
+          id:'infoproducer',
           priceMonthly: "597",
           priceYearly: "537",
           payment: "mensal",
           tag: false,
           for: "produtor",
-          info: "Recomendado para produtores",
+          info: "Recomendado para infoprodutores",
           itensPlan: [
             {
               title: "Imposto de renda dos sócios/empresa",
@@ -577,7 +575,6 @@ export default {
         },
       ],
       tabActive: false,
-
       itensPlan: [
         {},
         {
@@ -748,8 +745,18 @@ export default {
       ],
     };
   },
+  computed: {
+    ...mapGetters("checkout", ["planSelected","linksMonthly", "linksYearly"]),
+  },
   methods: {
-    ...mapMutations("form", ["setShowForm","setPlanSelected"]),
+    ...mapMutations("checkout", ["setPlanSelected"]),
+    checkout(plan) {
+      if(this.planYearly){
+        window.location.href = this.linksYearly[plan.id]
+        return
+      }
+        window.location.href = this.linksMonthly[plan.id]
+    },
   },
 };
 </script>

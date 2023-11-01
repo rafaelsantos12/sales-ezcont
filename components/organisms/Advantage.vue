@@ -30,7 +30,7 @@
           text="Quero começar agora"
           icon="arrow-top-right"
           class="button-advantage-desktop"
-          @click="setShowForm(true)"
+          @click="plan"
         />
       </div>
       <div class="wrapper-cards">
@@ -78,7 +78,7 @@
           text="Quero começar agora"
           icon="arrow-top-right"
           class="button-advantage-mobile"
-          @click="setShowForm(true)"
+         @click="plan"
       />
     </div>
   </section>
@@ -90,6 +90,15 @@ export default {
   name: "OrganismAdvantage",
   methods: {
     ...mapMutations("form", ["setShowForm"]),
+    plan() {
+      const messageErrorEl = this.$nuxt.$el.querySelector('#planos');
+        this.$nextTick(() => {
+            messageErrorEl.scrollIntoView({
+                block: "start",
+                behavior: "smooth",
+            });
+        });
+    },
   },
 };
 </script>

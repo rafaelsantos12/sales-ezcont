@@ -38,7 +38,7 @@
         <MoleculeButtonCustom
           text="Quero começar agora"
           icon="arrow-top-right"
-          @click="setShowForm(true)"
+          @click="plan"
         />
       </div>
     </div>
@@ -52,6 +52,15 @@ export default {
   name: "OrganismHeader",
   methods: {
     ...mapMutations("form", ["setShowForm"]),
+    plan() {
+      const messageErrorEl = this.$nuxt.$el.querySelector('#planos');
+        this.$nextTick(() => {
+            messageErrorEl.scrollIntoView({
+                block: "start",
+                behavior: "smooth",
+            });
+        });
+    },
   },
 };
 </script>

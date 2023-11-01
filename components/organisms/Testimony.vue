@@ -30,7 +30,7 @@
           color-icon-hover="var(--primary600)"
           class="button-testimony-desktop"
           has-shadow
-          @click="setShowForm(true)"
+          @click="plan"
         />
       </div>
       <div class="wrapper-right">
@@ -97,7 +97,7 @@
           hover-border-color="var(--dark100)"
           color-icon-hover="var(--primary600)"
           class="button-testimony-mobile"
-          @click="setShowForm(true)"
+          @click="plan"
         />
     </div>
   </section>
@@ -109,6 +109,15 @@ export default {
   name: "OrganismTestimony",
   methods: {
     ...mapMutations("form", ["setShowForm"]),
+    plan() {
+      const messageErrorEl = this.$nuxt.$el.querySelector('#planos');
+        this.$nextTick(() => {
+            messageErrorEl.scrollIntoView({
+                block: "start",
+                behavior: "smooth",
+            });
+        });
+    },
   },
 };
 </script>
