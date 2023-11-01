@@ -182,7 +182,7 @@
                   hover-border-color="var(--primary900)"
                   hover-bg-color="var(--primary900)"
                   @click="checkout(plan)"
-                  :disabled="isProducer && plan.for === 'afiliado'"
+                  :disabled="isProducer ? isProducer && plan.for === 'afiliado' : isAffiliate && plan.for === 'produtor'"
                 >
                   Contratar
                 </AtomButton>
@@ -752,10 +752,11 @@ export default {
     ...mapMutations("checkout", ["setPlanSelected"]),
     checkout(plan) {
       if(this.planYearly){
-        window.location.href = this.linksYearly[plan.id]
+        window.open(this.linksYearly[plan.id], '_blank')
+        
         return
       }
-        window.location.href = this.linksMonthly[plan.id]
+         window.open(this.linksMonthly[plan.id], '_blank')
     },
   },
 };
